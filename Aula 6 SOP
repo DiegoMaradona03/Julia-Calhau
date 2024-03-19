@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula 6 SOP</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Aula HTML</h1>
+        </header>
+        <main>
+
+            <h1>Nome: </h1><h2>Diego Maradona Preti Costa Figuerêdo</h2>
+            <hr><p></p>
+            <h1>Numero de telefone: </h1><h2>+55 19 00000-0666</h2>
+            <hr><p></p>
+
+        </main>
+    </body>
+</html>
