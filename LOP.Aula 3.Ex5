@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"");
+	char nome[30];
+	float preco, novoPreco;
+
+	printf("Digite o nome e preço de uma mercadoria:\n");
+	scanf("%s %f", &nome, &preco);
+	
+	novoPreco = preco - preco * 5 / 100; 
+	
+	printf("A mercadoria %s passou a custar %.2f\n", nome, novoPreco);
+	
+	return 0;
+}
