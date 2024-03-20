@@ -1,14 +1,27 @@
 #include <stdio.h>
 #include <locale.h>
 int main(){
-	setlocale(LC_ALL,"");
-	char nome[20];
-	float sal, reajuste, novoSal;
-	printf("Digite o 1º nome e o salário do funcionário:\n");
-	scanf("%s %f", &nome, &sal);
-	printf("Digite o percentual de reajuste:\n");
-	scanf("%f", &reajuste);
-	novoSal = sal + sal * reajuste / 100;
-	printf("O salário de %s reajustado será de %.2f", nome, novoSal);
+	
+	char nome [50];
+	float salario, percentual, novo_salario;
+
+    //Solicitar a entrada do nome da pessoa
+	printf("Digite o nome da pessoa: ");
+	scanf("%s", &nome);
+
+    //Solicitar a entrada do salario	
+    printf("Digite o salario da pessoa: R$");
+	scanf("%f", &salario);
+
+    //Solicitar a entrada do percentual
+    printf("Digite o valor do percentual: ");
+	scanf("%f", &percentual);	
+	
+	novo_salario = salario *(1+percentual/100);
+	
+	//Exibir o do nome da pessoa e o seu salario
+	printf("Novo salario de %s: R$ %.2f\n", nome, novo_salario);
+	
 	return 0;
+	
 }
