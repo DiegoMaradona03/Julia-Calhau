@@ -11,7 +11,7 @@ int main(){
 	
 	porcentagem = votos * 100.0 / eleitores;
 	
-	printf("%.1f%% dos eleitores participaram das eleiões em %s\n", porcentagem, cidade);
+	printf("%.1f%% dos eleitores participaram das eleições em %s\n", porcentagem, cidade);
 	
 	return 0;
 }
