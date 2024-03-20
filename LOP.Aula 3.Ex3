@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <locale.h>
 int main(){
-	setlocale(LC_ALL,"");
-	int distancia;
-	printf("Digite a distância em km do vôo:\n");
-	scanf("%d", &distancia);
-	printf("O vôo vai durar %.1f horas", distancia / 900.0 );
+	float velocidade = 900;
+	float distancia, tempo;
+	
+	printf("Digite a distância a ser percorrida pelo aviao");
+	scanf("%f", &distancia);
+	
+	tempo = distancia / velocidade;
+	
+	printf("O necessario para percorrer %.2f km: %.2f horas\n", distancia, tempo);
+	
 	return 0;
 }
