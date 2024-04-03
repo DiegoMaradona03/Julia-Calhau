@@ -1,0 +1,22 @@
+#include <iostream>
+int main () {
+	char nome[50], nome_do_carro[50];
+	float velocidade;
+
+	printf("Digite o nome da pessoa que é dona do veiculo:");
+	scanf("%s", nome);
+
+	printf("Digite o nome do carro da pessoa:");
+	scanf("%s", nome_do_carro);
+
+    printf ("Digite a velocidade:");
+    scanf ("%f", &velocidade);
+
+    printf ("A velocidade do %s de %s é:%1.f", nome_do_carro, nome, velocidade);
+    if (velocidade>100){
+    printf (" portanto a velocidade está rápida");
+    }else{
+    printf (" portanto a velocidade está devagar");
+    }
+    return 0;
+}
