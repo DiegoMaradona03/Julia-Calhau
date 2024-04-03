@@ -1,10 +1,10 @@
 #include <iostream>
 int main () {
-	char nome [50];
-	float idade;
+    char nome [50];
+    float idade;
 
-	printf("Digite o nome da pessoa: ");
-	scanf("%s", &nome);
+    printf("Digite o nome da pessoa: ");
+    scanf("%s", &nome);
 
     printf ("Digite a idade:");
     scanf ("%f", &idade);
