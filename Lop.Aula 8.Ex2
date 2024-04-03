@@ -1,0 +1,19 @@
+#include <iostream>
+int main () {
+	char nome [50];
+	float idade;
+
+	printf("Digite o nome da pessoa: ");
+	scanf("%s", &nome);
+
+    printf ("Digite a idade:");
+    scanf ("%f", &idade);
+
+    printf ("A idade de %s é:%1.f", nome, idade);
+    if (idade>=18){
+    printf (" por tanto ele é maior de idade");
+    }else{
+    printf (" por tanto ele é menor de idade");
+    }
+    return 0;
+}
