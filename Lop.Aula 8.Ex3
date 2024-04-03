@@ -1,13 +1,13 @@
 #include <iostream>
 int main () {
-	char nome[50], nome_do_carro[50];
-	float velocidade;
+    char nome[50], nome_do_carro[50];
+    float velocidade;
 
-	printf("Digite o nome da pessoa que é dona do veiculo:");
-	scanf("%s", nome);
+    printf("Digite o nome da pessoa que é dona do veiculo:");
+    scanf("%s", nome);
 
-	printf("Digite o nome do carro da pessoa:");
-	scanf("%s", nome_do_carro);
+    printf("Digite o nome do carro da pessoa:");
+    scanf("%s", nome_do_carro);
 
     printf ("Digite a velocidade:");
     scanf ("%f", &velocidade);
