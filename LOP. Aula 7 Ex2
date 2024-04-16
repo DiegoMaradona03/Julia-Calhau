@@ -1,0 +1,24 @@
+#include <iostream>
+int main () {
+    char nome[50];
+    float nascimento, ano, idade;
+
+    printf("Digite o nome da pessoa: ");
+    scanf("%s", &nome);
+
+    printf ("Digite o ano em que nasceu:");
+    scanf ("%f", &nascimento);
+
+    printf ("Digite o ano atual:");
+    scanf ("%f", &ano);
+
+    idade = ano - nascimento;
+
+    printf ("A idade de %s é:%1.f", nome, idade);
+    if (idade>=16){
+    printf (" por tanto ele pode votar nesse ano");
+    }else{
+    printf (" por tanto ele não pode votar nesse ano");
+    }
+    return 0;
+}
