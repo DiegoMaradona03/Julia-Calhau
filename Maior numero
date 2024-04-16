@@ -1,0 +1,18 @@
+#include <iostream>
+int main () {
+    int a, b;
+
+    printf("escreva o primeiro número:\n");
+    scanf("%d", &a);
+    
+    printf("escreva o segundo número:\n");
+    scanf("%d", &b);
+    
+    if (a>b){
+    printf (" O maior número é %d", a);
+    }else{
+    printf (" O maior número é %d", b);
+    }
+    
+    return 0;
+}
