@@ -1,0 +1,71 @@
+#include <iostream>
+int main() {
+    int a;
+
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &a);
+
+    if (a <= 1) {
+        printf("%d não é um número primo.\n", a);
+        return 0;
+    }
+
+    std::vector<int> divisores; // Lista para armazenar os divisores
+
+    for (int b = 2; b * b <= a; ++b) {
+        if (a % b == 0) {
+            divisores.push_back(b); // Armazena o divisor na lista
+            if (b != a / b) { // Evita adicionar o mesmo divisor duas vezes
+                divisores.push_back(a / b); // Armazena o divisor complementar na lista
+            }
+        }
+    }
+
+    if (divisores.empty()) {
+        printf("%d é um número primo.\n", a);
+    } else {
+        printf("%d não é um número primo. É divisível por: ", a);
+        for (size_t b = 0; b < divisores.size(); ++b) {
+            printf("%d", divisores[b]); // Imprime os divisores
+            if (b != divisores.size() - 1) {
+                printf(", ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <iostream>
+
+int main() {
+    int num;
+
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &num);
+
+    if (num <= 1) {
+        printf("%d não é um número primo.\n", num);
+        return 0;
+    }
+
+    bool primo = true;
+
+    printf("%d não é um número primo. É divisível por: ", num);
+    for (int i = 2; i * i <= num; ++i) {
+        if (num % i == 0) {
+            primo = false;
+            printf("%d", i);
+            if (i != num / i) {
+                printf(", %d", num / i);
+            }
+            printf("\n");
+        }
+    }
+
+    if (primo) {
+        printf("%d é um número primo.\n", num);
+    }
+
+    return 0;
+}
