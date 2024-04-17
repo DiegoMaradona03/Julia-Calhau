@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+    int a;
+
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &a);
+
+    if (a <= 1) {
+        printf("%d não é um número primo.\n", a);
+        return 0;
+    }
+
+    for (int b = 2; b * b <= a; ++b) {
+        if (a % b == 0) {
+            printf("%d não é um número primo.\n", a);
+            return 0;
+        }
+    }
+
+    printf("%d é um número primo.\n", a);
+
+    return 0;
+}
