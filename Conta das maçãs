@@ -1,0 +1,20 @@
+#include <iostream>
+int main() {
+    float umaduzia = 0.25;
+    float menosque = 0.30;
+    int duzia = 12;
+    int menosduzia;
+    int qtde_maçã;
+
+    printf ("Digite a quantidade de maçã: ");
+    scanf ("%d", &qtde_maçã);
+
+    if (qtde_maçã>=duzia){
+        printf("você comprou %d maçã\n", qtde_maçã);
+        printf("a sua compra ficou: R$%.2f", qtde_maçã * umaduzia);
+    }else{
+    printf("você comprou %d maçã\n", qtde_maçã);
+    printf("a sua compra ficou: R$%.2f", qtde_maçã * menosque);
+    }
+    return 0;
+}
