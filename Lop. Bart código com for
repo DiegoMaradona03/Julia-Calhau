@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+    int Bart;
+    for(Bart = 1; Bart < 100; Bart++)
+        printf("não trolar a professora \n");
+    return 0;
+}
