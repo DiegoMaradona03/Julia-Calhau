@@ -9,19 +9,13 @@ int main () {
     scanf("%d", &b);
     
     if (a>b){
-    printf (" O maior número é %d", a);
+         printf (" O maior número é %d", a);
+         printf (" e o menor número é %d", b);
     }else{
-    printf (" O maior número é %d", b);
+         printf (" O maior número é %d", b);
+         printf (" e o menor número é %d", a);
     }
-    
-    if (a<b){
-    printf (" O menor número é %d", a);
-    }else{
-    printf (" O menor número é %d", b);
-    }
-    
     c = a + b;
     printf (" e a soma de ambos é: %d", c);
-    
     return 0;
 }
