@@ -17,5 +17,6 @@ int main () {
     }
     c = a + b;
     printf (" e a soma de ambos é: %d", c);
+
     return 0;
 }
