@@ -13,8 +13,8 @@ int main() {
         printf("você comprou %d maçã\n", qtde_maçã);
         printf("a sua compra ficou: R$%.2f", qtde_maçã * umaduzia);
     }else{
-    printf("você comprou %d maçãs\n", qtde_maçã);
-    printf("a sua compra ficou: R$%.2f", qtde_maçã * menosque);
+        printf("você comprou %d maçãs\n", qtde_maçã);
+        printf("a sua compra ficou: R$%.2f", qtde_maçã * menosque);
     }
     return 0;
 }
