@@ -1,0 +1,90 @@
+1 - Soma de dois números: Escreva um programa que solicite dois números ao usuário e imprima a soma deles
+
+x =int(input("digite um numero"))
+y = int(input("digite outro número:"))
+
+print("A soma dos números é:", x+y)
+
+
+2 - Média de três números: Escreva um programa que solicite três números ao usuário e imprima a média deles.
+
+num1 = int(input("digite um número: "))
+num2 = int(input("digite outro número: "))
+num3 = int(input("digite mais em números: "))
+
+media = (num1 + num2 + num3)/3
+print(f"A média dos números é: {media:.2f}")
+
+
+3 - Conversor de temperatura: Escreva um programa que converta uma temperatura em Celsius para Fahrenheit. 
+O usuário deve fornecer a temperatura em Celsius e o programa deve imprimir a temperatura equivalente em 
+Fahrenheit. A fórmula de conversão é: Fahrenheit = (Celsius * 9/5) + 32.
+
+celsius = float(input("Digite a temperatura em Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"A temperatura em fahrenheit é: {fahrenheit:.2f}°F")
+
+
+4 - Identificação de número par ou ímpar: Escreva um programa que solicite um número ao usuário e determine se ele é par ou ímpar. 
+
+n = int(input("Digite um número: "))
+
+if n % 2 == 0:
+    print("O número é par")
+else:
+    print("O número é impar")
+
+
+5 - Cálculo de fatorial: Escreva um programa que solicite um número inteiro positivo ao usuário e calcule o fatorial 
+desse número. O fatorial de um número inteiro positivo n é o produto de todos os inteiros positivos menores ou 
+iguais a n. Por exemplo, o fatorial de 5 é 5 * 4 * 3 * 2 * 1 = 120.
+
+n = input("Digite um número: ")
+
+if not n.isdigit():
+    print("Você deve digitar somente números inteiros")
+else:
+    n = int(n)
+    if n < 0:
+        print("O número é negativo")
+    else:
+        fatorial = 1
+        for i in range(1, n+1):
+            fatorial *= i
+        print(f"O fatorial de {n} é {fatorial}")
+
+
+6 - Verificador de ano bissexto: Escreva um programa que verifique se um ano fornecido pelo usuário é bissexto ou não. Um ano é bissexto se for 
+divisível por 4, exceto em anos que são divisíveis por 100 mas não são divisíveis por 400.
+
+ano = int(input("Digite um ano: "))
+
+if(ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print("O ano é bissexto")
+else:
+    print("O ano não é bissexto")
+
+
+7- Verificação de número positivo ou negativo: Escreva um programa que solicite um número ao usuário e determine se ele é positivo, negativo ou zero.
+
+while True:
+    num = int(input("Digite um número: "))
+    if num > 0:
+        print("O número é positivo")
+    elif num < 0:
+        print("O número é negativo")
+    else:
+        print("O número é neutro")
+
+
+8- Comparação de dois números: Escreva um programa que solicite dois números ao usuário e determine qual é o maior deles. Se forem iguais, o programa deve informar isso.
+
+num1 = int(input("Digite um número: "))
+num2 = int(input("Digite outro número: "))
+    
+if num1 > num2:
+    print("O maior número é:", num1)
+elif num2 > num1:
+    print("O maior número é:", num2)
+else:
+    print("Os números são iguais")
