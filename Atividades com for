@@ -1,0 +1,56 @@
+1 - Faça um programa que escreva os numerais de 1 a 20
+
+#include <stdio.h>
+int main() {
+    int a;
+    for(a = 1; a <= 20; a++)
+        printf("%d° Lugar \n", a);
+    return 0;
+}
+
+2 - Faça um programa que escreva os numerais de 20 a 1
+
+#include <stdio.h>
+int main() {
+    int a;
+    for(a = 20; a >= 1; a--)
+        printf("%d° Lugar \n", a);
+    return 0;
+}
+
+3 - Faça um programa que escreva na tela os numerais de 0 a 20 de 2 em 2
+
+#include <stdio.h>
+int main() {
+    int a;
+    for(a = 0; a <= 20; a+=2)
+        printf("%d° Lugar \n", a);
+    return 0;
+}
+
+4 - Faça um programa que escreva na tela os numerais de 20 a 0 de 4 em 4
+
+#include <stdio.h>
+int main() {
+    int a;
+    for(a = 20; a >= 0; a-=4)
+        printf("%d° Lugar \n", a);
+    return 0;
+}
+
+5 - Faça um programa que peça para o usuário digitar um número qualquer porém só termine quando o usuário digitar o número 4;
+
+#include <stdio.h>
+int main() {
+    int a;
+    for (;;) {
+        printf("Digite um número: ");
+        scanf("%d", &a);
+        
+        if (a == 4) {
+            printf("você digitou o número 4 \n", a);
+            break; // Termina o loop quando o número 4 é digitado
+        }
+    }
+    return 0;
+}
