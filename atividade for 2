@@ -10,7 +10,7 @@ int main() {
             printf("Nota válida: %.2f\n", nota);
             break;
         } else {
-            printf("Valor inválido!.\n");
+            printf("Valor inválido!\n");
         }
     }
 
