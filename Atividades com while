@@ -39,6 +39,5 @@ int main() {
         printf("%d x %d = %d\n", N, a, (N * a));
         a++;
     }
-    
     return 0;
 }
