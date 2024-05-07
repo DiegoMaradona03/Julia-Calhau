@@ -2,8 +2,7 @@ Crie um programa que imprima 11 vezes a frase " Hello World!"
 #include <stdio.h>
 int main() {
     int a = 0;
-    while (a < 11)
-    {
+    while (a < 11) {
         printf("Hello World \n", a);
         a += 1;
     }
@@ -15,8 +14,7 @@ Escrever um programa para exibir os números de 1 até 50 na tela.
 #include <stdio.h>
 int main() {
     int a = 1;
-    while (a <= 50)
-    {
+    while (a <= 50) {
         printf("%d \n", a);
         a += 1;
     }
