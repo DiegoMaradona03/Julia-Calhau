@@ -22,11 +22,11 @@ int main() {
     return 0;
 }
 
-Faça um programa que mostre a tabuada de um número N (N será lido do teclado)
+//Faça um programa que mostre a tabuada de um número N (N será lido do teclado)
 #include <stdio.h>
 
 int main() {
-    int N;
+    int N,a;
     
     // Solicita um número do usuário
     printf("Digite um número para ver a sua tabuada: ");
@@ -34,9 +34,9 @@ int main() {
     
     // Mostra a tabuada do número N
     printf("Tabuada de %d:\n", N);
-    int a = 1;
+    a = 1;
     while (a <= 10) {
-        printf("%d x %d = %d\n", N, a, N * a);
+        printf("%d x %d = %d\n", N, a, (N * a));
         a++;
     }
     
