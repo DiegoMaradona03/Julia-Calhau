@@ -1,3 +1,4 @@
+Versão 1
 #include<stdio.h>
 int main(){
     int calc;
@@ -45,9 +46,61 @@ int main(){
     printf("Encerrando programa. . .");
     break;
         }
-        
-        
-        
     }
    return 0;
+}
+
+Versão 2
+#include<stdio.h>
+
+int main() {
+    char calc;
+    int a, b, c;
+
+    for (;;) {
+        printf("Digite uma operação: (+), (-), (x), (/) ou (s) para sair: ");
+        scanf(" %c", &calc);
+
+        if (calc == 's') {
+            printf("Encerrando programa...\n");
+            break;
+        }
+
+        printf("Digite o 1° Numero: ");
+        scanf("%d", &a);
+
+        printf("Digite o 2° Numero: ");
+        scanf("%d", &b);
+
+        switch (calc) {
+            case '+':
+                c = a + b;
+                printf("A soma é: %d\n", c);
+                break;
+
+            case '-':
+                c = a - b;
+                printf("A subtração é: %d\n", c);
+                break;
+
+            case '*':
+                c = a * b;
+                printf("A multiplicação é: %d\n", c);
+                break;
+
+            case '/':
+                if (b == 0) {
+                    printf("Erro: divisão por zero\n");
+                } else {
+                    c = a / b;
+                    printf("A divisão é: %d\n", c);
+                }
+                break;
+
+            default:
+                printf("Operação inválida. Tente novamente.\n");
+        }
+    }
+
+    return 0;
 }
