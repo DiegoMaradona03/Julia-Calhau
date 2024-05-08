@@ -1,0 +1,95 @@
+//Versão 1 do programa que simula as 4 operações matemáticas básicas.
+#include <stdio.h>
+
+int main() {
+    int operações;
+    int a, b, c;
+
+    for (;;) {
+        printf(" Digite 1 para Soma: \n Digite 2 para Subtração: \n Digite 3 para Multipicação: \n Digite 4 para Divisão: \n ");
+        scanf("%d", &operações);
+  if (operações <= 4) {
+        switch (operações) {
+//Soma
+  case 1:
+    printf("Digite dois números:\n");
+    scanf("%d %d", &a, &b);
+    c = a + b;
+    printf("%d + %d = %d \n", a, b, c);
+    break;
+//Subtração
+  case 2:
+    printf("Digite dois números:\n");
+    scanf("%d %d", &a, &b);
+    c = a - b;
+    printf("%d - %d = %d \n", a, b, c);
+    break;
+//Multiplicação
+  case 3:
+    printf("Digite dois números:\n");
+    scanf("%d %d", &a, &b);
+    c = a * b;
+    printf("%d x %d = %d \n", a, b, c);
+    break;
+//Divisão
+  case 4:
+    printf("Digite dois números:\n");
+    scanf("%d %d", &a, &b);
+    c = a / b;
+    printf("%d ÷ %d = %d \n", a, b, c);
+    break;
+    }
+        }else{
+            printf("Valor incorreto.\n");
+        }
+}
+    return 0;
+}
+
+//Versão 2 do programa que simula as 4 operações matemáticas básicas.
+#include<stdio.h>
+int main(){
+    int calc;
+    int a,b,c;
+    printf(" Digite 1 para Soma: \n Digite 2 para Subtração: \n Digite 3 para Multipicação: \n Digite 4 para Divisão: \n ");
+    scanf("%d", &calc);
+    switch(calc){
+    
+    case 1:
+    printf("Digite o 1° Numero: ");
+    scanf("%d", &a);
+    printf("Digite o 2° Numero: ");
+    scanf("%d", &b);
+    c = a + b;
+    printf("a soma é: %d",c);
+    break;
+    
+    case 2:
+    printf("Digite o 1° Numero: ");
+    scanf("%d", &a);
+    printf("Digite o 2° Numero: ");
+    scanf("%d", &b);
+    c = a - b;
+    printf("A Subtração é: %d",c);
+    break;
+    
+    case 3:
+    printf("Digite o 1° Numero: ");
+    scanf("%d", &a);
+    printf("Digite o 2° Numero: ");
+    scanf("%d", &b);
+    c = a * b;
+    printf("A Multipicação é: %d",c);
+    break;
+    
+    case 4:
+    printf("Digite o 1° Numero: ");
+    scanf("%d", &a);
+    printf("Digite o 2° Numero: ");
+    scanf("%d", &b);
+    c = a / b;
+    printf("A Divisão é: %d",c);
+    break;
+}
+   return 0;
+}
