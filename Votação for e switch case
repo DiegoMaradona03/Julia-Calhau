@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main() {
+
+    // Declaração das variáveis
+    int votos_steve_jobs = 0, votos_bill_gates = 0, votos_linus_torvalds = 0, votos_nulos = 0, votos_brancos = 0, voto;
+    float porcentagem_nulos, porcentagem_brancos;
+    
+    // Loop infinito para receber os votos dos eleitores
+    for (;;) {
+        // Mostra o menu
+        printf(" As opções são:\n");
+        printf("1. Candidato Steve Jobs\n");
+        printf("2. Candidato Bill Gates\n");
+        printf("3. Candidato Linus Torvalds\n");
+        printf("4. Nulo\n");
+        printf("5. Branco\n");
+        printf("6. Encerrar e mostrar resultados\n");
+        printf("Entre com o seu voto: ");
+        
+        // Lê o voto do eleitor
+        scanf("%d", &voto);
+
+        // Verifica se é um voto válido
+        if (voto >= 1 && voto <= 5) {
+            // Contabiliza o voto
+            switch (voto) {
+                case 1:
+                    votos_steve_jobs++;
+                    break;
+                case 2:
+                    votos_bill_gates++;
+                    break;
+                case 3:
+                    votos_linus_torvalds++;
+                    break;
+                case 4:
+                    votos_nulos++;
+                    break;
+                case 5:
+                    votos_brancos++;
+                    break;
+            }
+        } else if (voto == 6) {
+            // Calcula as porcentagens
+            porcentagem_nulos = votos_nulos * 100.0 / (votos_steve_jobs + votos_bill_gates + votos_linus_torvalds + votos_nulos + votos_brancos);
+            porcentagem_brancos = votos_brancos * 100.0 / (votos_steve_jobs + votos_bill_gates + votos_linus_torvalds + votos_nulos + votos_brancos);
+
+            // Mostra os resultados
+            printf("\nNúmero de votos de cada candidato:\n");
+            printf("Steve Jobs: %d\n", votos_steve_jobs);
+            printf("Bill Gates: %d\n", votos_bill_gates);
+            printf("Linus Torvalds: %d\n", votos_linus_torvalds);
+            printf("\nPorcentagem de votos nulos: %.2f%%\n", porcentagem_nulos);
+            printf("Porcentagem de votos brancos: %.2f%%\n", porcentagem_brancos);
+            
+            // Determina o candidato vencedor
+            if (votos_steve_jobs > votos_bill_gates && votos_steve_jobs > votos_linus_torvalds) {
+                printf("\nCandidato vencedor: Steve Jobs\n");
+            } else if (votos_bill_gates > votos_steve_jobs && votos_bill_gates > votos_linus_torvalds) {
+                printf("\nCandidato vencedor: Bill Gates\n");
+            } else if (votos_linus_torvalds > votos_steve_jobs && votos_linus_torvalds > votos_bill_gates) {
+                printf("\nCandidato vencedor: Linus Torvalds\n");
+            } else {
+                printf("\nHouve empate entre os candidatos.\n");
+            }
+
+            break;
+        } else {
+            printf("Voto inválido. Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
