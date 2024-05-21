@@ -2,7 +2,7 @@
 
 int main() {
     int contador = 0;
-    float soma = 0.0f;
+    float soma = 0;
     float numero;
 
     printf("Digite um número real maior que zero (ou zero para sair):\n");
