@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+
+    for (;;) {
+        // Mostra o menu
+        printf("Digite a opção 1\n");
+        printf("Digite a opção 0 para sair\n");
+        scanf("%d", &a);
+        
+         // Verifica se a escolha é válida
+        if (a == 1) {
+                printf("Você escolheu a Opção 1.\n");
+            } else if (a == 0) {
+                printf("Programa encerrado...\n");
+                break;
+            } else {
+                printf("Valor incorreto.\n");
+            }
+        }
+
+    return 0;
+}
