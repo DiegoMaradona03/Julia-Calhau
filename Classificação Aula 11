@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    int codigo;
+
+    printf("Código                |Classificação\n");
+    printf("1                     |Alimento não-perecível\n");
+    printf("2,3 ou 4              |Alimento perecível\n");
+    printf("5 ou 6                |Vestuário\n");
+    printf("7                     |Higiene Pessoal\n");
+    printf("8 até 15              |Limpeza e Utensílios Domésticos\n");
+    printf("Qualquer outro código |Código inválido\n");
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+
+    switch (codigo) {
+        case 1:
+            printf("Classificação: Alimento não-perecível\n");
+            break;
+        case 2:
+        case 3:
+        case 4:
+            printf("Classificação: Alimento perecível\n");
+            break;
+        case 5:
+        case 6:
+            printf("Classificação: Vestuário\n");
+            break;
+        case 7:
+            printf("Classificação: Higiene Pessoal\n");
+            break;
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+            printf("Classificação: Limpeza e Utensílios Domésticos\n");
+            break;
+        default:
+            printf("Classificação: Código inválido\n");
+            break;
+    }
+
+    return 0;
+}
