@@ -18,20 +18,24 @@ int main() {
 
 #include <stdio.h>
 
-int main()
-{
-    const int ARRAY_SIZE = 5;
-    float func[ARRAY_SIZE];
-    int cont;
+int main() {
+    float salario[5];
+    float imposto;
+    int a;
 
-    for(cont=0 ; cont<ARRAY_SIZE ; cont++){
-        printf("Funcionario %d: ", cont+1);
-        scanf("%f", &func[cont]);
+    // Solicitar os salários dos funcionários
+    printf("Digite os salários dos 5 funcionários:\n");
+    for(a = 0; a < 5; a++) {
+        printf("Funcionário %d: R$ ", a+1);
+        scanf("%f", &salario[a]);
     }
 
-    printf("Imposto a pagar: \n");
-    for(cont=0 ; cont<ARRAY_SIZE ; cont++)
-        printf("Funcionario %d: R$%.2f\n", cont+1, func[cont]*0.07);
+    // Calcular e mostrar o imposto para cada funcionário
+    printf("\nImposto de Renda Mensal:\n");
+    for(a = 0; a < 5; a++) {
+        imposto = salario[a] * 0.07;
+        printf("Funcionário %d: R$ %.2f\n", a+1, imposto);
+    }
 
     return 0;
 }
