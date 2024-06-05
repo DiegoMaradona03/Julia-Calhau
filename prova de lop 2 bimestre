@@ -15,3 +15,23 @@ int main() {
     printf("%d", arr[2]);
     return 0;
 }
+
+#include <stdio.h>
+
+int main()
+{
+    const int ARRAY_SIZE = 5;
+    float func[ARRAY_SIZE];
+    int cont;
+
+    for(cont=0 ; cont<ARRAY_SIZE ; cont++){
+        printf("Funcionario %d: ", cont+1);
+        scanf("%f", &func[cont]);
+    }
+
+    printf("Imposto a pagar: \n");
+    for(cont=0 ; cont<ARRAY_SIZE ; cont++)
+        printf("Funcionario %d: R$%.2f\n", cont+1, func[cont]*0.07);
+
+    return 0;
+}
