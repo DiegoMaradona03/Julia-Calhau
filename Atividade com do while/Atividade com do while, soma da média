@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main (){
+    float nota1, nota2, nota3, soma, media;
+    int resp;
+    
+    do{
+	      printf ("Digite a 1° nota: \n");
+	      scanf ("%f", &nota1);
+	
+	      printf ("Digite a 2° nota: \n");
+	      scanf ("%f", &nota2); 
+	
+	      printf ("Digite a 3° nota: \n");
+	      scanf ("%f", &nota3);
+	
+	      soma = nota1+nota2+nota3;
+	      media = soma/3;
+	
+	      printf("A soma das notas é: %2.f \n", soma);
+	      printf("A média é: %2.f \n", media);
+	
+    	  printf("Digite 1 para continuar ou 0 para sair\n");
+	      scanf("%d", &resp);
+	
+    } while (resp==1);
+    
+    return 0;
+}
