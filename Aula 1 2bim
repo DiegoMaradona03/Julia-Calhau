@@ -1,0 +1,113 @@
+Index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+<body>
+        <input type="number" id="numero1" placeholder="Digite um número">
+        <input type="number" id="numero2" placeholder="Digite um número">
+        <input type="submit" value="somar" id="btnsomar" onclick="btnsomar()">
+        <p id="mensagem1">A sua operação ira aparecer aqui!!</p>
+    
+        <input type="number" id="numero3" placeholder="Digite um número">
+        <input type="number" id="numero4" placeholder="Digite um número">
+        <input type="submit" value="subtrair" id="btnsubtrair" onclick="btnsubtrair()">
+        <p id="mensagem2">A sua operação ira aparecer aqui!!</p>
+
+        <input type="number" id="numero5" placeholder="Digite um número">
+        <input type="number" id="numero6" placeholder="Digite um número">
+        <input type="submit" value="multiplicar" id="btnmultiplicar" onclick="btnmultiplicar()">
+        <p id="mensagem3">A sua operação ira aparecer aqui!!</p>
+
+        <input type="number" id="numero7" placeholder="Digite um número">
+        <input type="number" id="numero8" placeholder="Digite um número">
+        <input type="submit" value="dividir" id="btndividir" onclick="btndividir()">
+        <p id="mensagem4">A sua operação ira aparecer aqui!!</p>
+
+        <input type="number" id="numero9" placeholder="Digite um número">
+        <input type="number" id="numero10" placeholder="Digite um número">
+        <input type="submit" value="potencia" id="btnpotencia" onclick="btnpotencia()">
+        <p id="mensagem5">A sua operação ira aparecer aqui!!</p>
+
+        <input type="number" id="numero11" placeholder="Digite um número">
+        <input type="submit" value="calcular" id="btncalcular" onclick="btncalcular()">
+        <p id="mensagem6">A sua operação ira aparecer aqui!!</p>
+</body>
+<script src="script.js"></script>
+</html>
+
+
+script.js
+
+function btnsomar(){
+    var numero1 = Number(document.getElementById("numero1").value);
+    var numero2 = Number(document.getElementById("numero2").value);
+    var mensagem1 = document.querySelector("#mensagem1");
+    var soma;
+
+    soma = numero1 + numero2;
+
+    mensagem1.innerHTML = `
+    <p>${soma}</p>
+`
+}
+function btnsubtrair(){
+    var numero3 = Number(document.getElementById("numero3").value);
+    var numero4 = Number(document.getElementById("numero4").value);
+    var mensagem2 = document.querySelector("#mensagem2");
+    var subtraição;
+
+    subtraição = numero3 - numero4;
+
+    mensagem2.innerHTML = `
+    <p>${subtraição}</p>
+`
+}
+function btnmultiplicar(){
+    var numero5 = Number(document.getElementById("numero5").value);
+    var numero6 = Number(document.getElementById("numero6").value);
+    var mensagem3 = document.querySelector("#mensagem3");
+    var multiplicar;
+
+    multiplicar = numero5 * numero6;
+
+    mensagem3.innerHTML = `
+    <p>${multiplicar}</p>
+`
+}
+function btndividir(){
+    var numero7 = Number(document.getElementById("numero7").value);
+    var numero8 = Number(document.getElementById("numero8").value);
+    var mensagem4 = document.querySelector("#mensagem4");
+    var dividir;
+
+    dividir = numero7 / numero8;
+
+    mensagem4.innerHTML = `
+    <p>${dividir}</p>
+`
+}
+function btnpotencia(){
+    var numero9 = Number(document.getElementById("numero9").value);
+    var numero10 = Number(document.getElementById("numero10").value);
+    var mensagem5 = document.querySelector("#mensagem5");
+    var potencia;
+
+    potencia = numero9 ** numero10;
+
+    mensagem5.innerHTML = `
+    <p>${potencia}</p>
+`
+}
+function btncalcular(){
+    var numero11 = Number(document.getElementById("numero11").value);
+    var mensagem6 = document.querySelector("#mensagem6");
+    
+    mensagem6.innerHTML = `
+    <p>10% de${numero11} é equivalente à: ${numero11*0.10}, com um resultado líquido de ${numero11-numero11*0.10}</p>
+`
+}
