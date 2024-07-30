@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+<body>
+        <input type="text" id="Aluno" placeholder="Digite o nome do Aluno">
+        <input type="number" id="numero1" placeholder="Digite um número">
+        <input type="number" id="numero2" placeholder="Digite um número">
+        <input type="number" id="numero3" placeholder="Digite um número">
+        <input type="submit" value="calcular a media" id="btnmedia" onclick="btnmedia()">
+        <div id="resultado">
+        <p id="mensagem1">A sua operação ira aparecer aqui!!</p>
+        <p id="mensagem2"></p>
+        <p id="mensagem3"></p>
+        </div>
+</body>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</html>
+
+
+function btnmedia(){
+    var Aluno = document.getElementById("Aluno").value;
+    var numero1 = Number(document.getElementById("numero1").value);
+    var numero2 = Number(document.getElementById("numero2").value);
+    var numero3 = Number(document.getElementById("numero3").value);
+    var mensagem1 = document.querySelector("#mensagem1");
+    var mensagem2 = document.querySelector("#mensagem2");
+    var mensagem3 = document.querySelector("#mensagem3");
+    var media;
+    var 
+
+    media = (numero1 + numero2 + numero3) / 3;
+
+    mensagem1.innerHTML = `Nome do Aluno: ${Aluno}`;
+
+    mensagem2.innerHTML = `Média: ${media.toFixed(2)}`;
+
+    if (media >= 5.0) {
+        mensagem3.innerHTML = `Situação: Aprovado`;
+    } else {
+        mensagem3.innerHTML = `Situação: Reprovado`;
+    }
+}
+
+
+body{
+    background-color: white;
+}
+
+.container{
+    width: 14.5%;
+    height: 280px;
+    padding: 5px;
+    margin: 0 auto;
+    background: black;
+    border-radius: 0px;
+
+}
+
+input{
+    width: 250px;
+    height: 50px;
+    border-radius: 15px;
+    border-bottom: red;
+    padding: 5px;
+    margin: 5px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: red;
+    background-color: red;
+    color: white;
+}
