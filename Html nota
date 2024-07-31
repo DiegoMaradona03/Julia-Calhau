@@ -1,3 +1,5 @@
+Index.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +23,7 @@
 <link rel="stylesheet" href="style.css">
 </html>
 
+script.js
 
 function btnmedia(){
     var Aluno = document.getElementById("Aluno").value;
@@ -46,6 +49,7 @@ function btnmedia(){
     }
 }
 
+style.css
 
 body{
     background-color: white;
