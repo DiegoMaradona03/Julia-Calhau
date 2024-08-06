@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - LIMA</title>
+</head>
+<body background="https://i.pinimg.com/originals/1b/45/63/1b456377a9dce67a7dc3630260aa7572.gif">
+    <p><b><font size="10" color="white" face="BatmanForeverAlternate">Julia Calhau</b></p></font>
+    <p><h3><i><font color="white">Desenvolvimento de Sistemas</i></font></h3></p>
+    <p><h3><font color="white">3º<sup>Semestre</sup>2024</font></h3></p>
+    <p><h4><font color="red">5º<sub>Itinerário</sub></font></h4></p></font>
+    <p><h2><font color="white">Aula de <ins>Lima</ins></font></h2></p>
+    <p><h3><del><font color="white">Mecatronica</del></font></h3></p>
+    <p><h2><mall><font color="white">Eles são</mall></font></h2></p>
+    <p><h1><font face="BatmanForeverOutline"><mark>T.I</mark></font></h1></p>
+    <br>
+    <br>
+    <center><img src="https://seeklogo.com/images/S/senai-logo-DD8DA4BFBE-seeklogo.com.png"></center>
+    <br>
+    <center><a href="https://www.sp.senai.br/">SENAI</a></center>
+</body>
+</html>
