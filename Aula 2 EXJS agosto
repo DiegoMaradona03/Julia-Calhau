@@ -1,0 +1,267 @@
+Ex1
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <h1>Primeiro Exercício</h1>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+alert("Ola Mundo");
+
+Ex2
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h1>Interagindo com o botão</h1>
+    <button onclick="clicou()">Clique aqui!</button>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function clicou(){
+    window.alert("Você clicou no botão!");
+}
+Ex3
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Trabalhando com dados</h1>
+    <button onclick="início()">Clique para começar!</button>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function início(){
+    let nome = window.prompt("Qual é o seu nome?")
+    window.alert(`Olá, ${nome}! é um prazer te conhecer!`)
+}
+Ex4
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+    <h1>Trabalhando com dados V2.0</h1>
+    <button onclick="clicou()">Clique aqui!</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function clicou(){
+    let nome = window.prompt('Qual o seu nome');
+    let mensagem = window.document.getElementsById('mensagem');
+
+    mensagem.innerHTML = `<p>Olá, <strong>${nome}</strong>! É
+    prazer em te conhecer</p>`
+}
+Ex5
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecercício 05</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">Clique aqui para inserir um valor!</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function calcular (){
+    let n1 = Number(window.prompt('Digite um número: '));
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p> o dobro de
+    ${n1} é ${n1*2}, e a metade é ${n1/2}!</p>`
+}
+Ex6
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecercício 06</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">Clique aqui para inserir um valor!</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function calcular (){
+    let n1 = Number(window.prompt('Digite um número: '));
+    let n2 = Number(window.prompt('Digite um número: '));
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>
+    ${n1} + ${n2} é ${n1+n2}!</p>`
+}
+Ex7
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecercício 07</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">Clique aqui para inserir os dados</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function calcular (){
+    let nome = window.prompt('Qual o seu nome');
+    let n1 = Number(window.prompt('Digite um número: '));
+    let n2 = Number(window.prompt('Digite um número: '));
+    let n3 = Number(window.prompt('Digite um número: '));
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `
+    <p>Nome do aluno: ${nome}</p>
+    <p>primeira nota: ${n1}</p>
+    <p>segunda nota: ${n2}</p>
+    <p>terceira nota: ${n3}</p>
+    <p>média final: ${(n1+n2+n3)/3}!</p>`
+}
+Ex8
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecercício 08</title>
+</head>
+<body>
+    <h1>varios cálculos</h1>
+    <button onclick="calcular()">Clique aqui para inserir um valor!</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function calcular(){
+    let n1 = Number(window.prompt('Digite um número: '));
+    const raiz = Math.sqrt(n1);
+    console.log(raiz);
+    const raizCubica = Math.cbrt(n1);
+    console.log(raizCubica);
+    const parteInteira = Math.parseInt(n1);
+    console.log(parteInteira);
+    const valorInteiro = Math.round(n1);
+    console.log(valorInteiro);
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>Número: ${n1}</p>
+    <hr>
+    <p>O seu valor absoluto é: ${n1}</p>
+    <p>A sua parte inteira é: ${parteInteira}</p>
+    <p>O valor inteiro mais próximo é: ${valorInteiro}</p>
+    <p>A sua raiz quadrada é: ${raiz}</p>
+    <p>A sua raiz cúbica é: ${raizCubica}</p>
+    <p>O valor de ${n1}²: ${n1*n1}</p>
+    <p>O valor de ${n2}³: ${(n1*n1*n1)}!</p>`
+
+} 
+Ex9
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Trabalhando com dados</h1>
+    <button onclick="início()">Clique aqui</button>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+
+Ex10
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <h1>Interagindo com o botão</h1>
+    <button onclick="clicou1()">Ação 1</button>
+    <button onclick="clicou2()">Ação 2!</button>
+    <button onclick="clicou3()">Ação 3</button>
+    <button onclick="clicou4()">Ação 4</button>
+    <button onclick="clicou5()">Clique aqui para reiniciar!</button>
+    <p id="mensagem"></p>
+</body>
+<script src="index.js"></script>
+</html>
+index.js
+function clicou1 (){
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>
+    Clicou no primeiro botão</p>`
+}
+function clicou2 (){
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>
+    Clicou no segundo botão</p>`
+}
+function clicou3 (){
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>
+    Clicou no terceiro botão</p>`
+}
+function clicou4 (){
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = `<p>
+    Clicou no quarto botão</p>`
+}
+function clicou5 (){
+    let mensagem = window.document.getElementById("mensagem");
+
+    mensagem.innerHTML = ``
+}
