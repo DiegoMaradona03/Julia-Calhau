@@ -1,0 +1,104 @@
+Inicio.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - LIMA</title>
+</head>
+<body background color="white">
+    <center><p><b><font size="10" color="red" face="BatmanForeverAlternate">Olimpíadas 2024</b></p></font></body></center>
+    <br>
+    <center><img src="https://i.pinimg.com/originals/ad/a3/c7/ada3c7b0d94c2159e156adcbd2a8f9cd.gif"></center>
+    <p><h5><font face="Arial">A Historia do Futebol</font></h5></p>
+    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Futebol.html">Futebol</a>
+    <p><h5><font face="Arial">A Historia do Basquete</font></h5></p>
+    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Basquete.Html">Basquete</a>
+    <p><h5><font face="Arial">A Historia do Volei</font></h5></p>
+    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Volei.html">Volei</a>
+</body>
+</html>
+
+Futebol.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b><font size="10" color="white" face="BatmanForeverAlternate">A historia do Futebol</b></title>
+</head>
+<body background="https://wallpapers.com/images/hd/soccer-stadium-1920-x-1080-background-azhfleqn4fphxk17.jpg">
+    <p><b><font size="10" color="white" face="BatmanForeverAlternate">A Historia do Futebol</b></p></font>
+    <p><h3><i><font color="white" face="Arial">o futebol moderno surgiu apenas no século XIX, mas sabe-se que milhares de anos atrás já eram praticados pela humanidade esportes com características semelhantes. O vestígio de prática similar ao futebol mais antigo do qual se tem conhecimento remonta à China de 3000 a.C.
+        Mas os registros históricos não remetem apenas aos chineses. Existem evidências de esportes semelhantes ao futebol sendo praticado por japoneses, egípcios, além de gregos e romanos antigos. Também há registros em diferentes povos mesoamericanos (da região da Mesoamérica, atual México e América Central).
+        Eduardo Galeano traz relatos de algo parecido com o futebol sendo praticado na Inglaterra durante a Idade Média. O jornalista uruguaio destaca que, no século XIV, o rei Eduardo II condenava essa prática esportiva. Outros reis ingleses como Eduardo III, Henrique IV e Henrique VI chegaram a proibir a prática do esporte.
+        Alguns séculos depois, ainda na Inglaterra, surgiria o futebol moderno. Isso ocorreu a partir da junção de clubes que não aceitavam determinadas regras da prática do rugby e decidiram unir-se para criar outro esporte, no qual não se conduzisse a bola com as mãos. As regras deste novo esporte, o futebol, foram estabelecidas em 1846 pela Universidade de Cambridge.
+        As primeiras normas ainda estavam em um estágio extremamente embrionário e apresentavam algumas diferenças em relação ao futebol praticado atualmente. Galeano aponta que as regras estabelecidas inicialmente para o futebol “não limitavam o número de jogadores, nem a extensão do campo, nem a altura do arco, nem a duração das partidas”. 
+        Naturalmente, uma série de mudanças foram sendo realizadas ao longo do século XIX, como a introdução do goleiro e do árbitro, a criação do pênalti para as faltas cometidas dentro da área, além da utilização das mãos para a cobrança do lateral. O crescimento do esporte e sua disseminação pela Europa levaram ao surgimento da Federação Internacional de Futebol (Fifa), que contava inicialmente com as seguintes nações:</i></font></h3></p>  
+    <p><h3><i><font color="white" face="Arial">•Bélgica,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•Dinamarca,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•França,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•Holanda,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•Espanha,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•Suécia,</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">•Suíça.</i></font></h3></p>
+    <p><h3><i><font color="white" face="Arial">Uma importante observação é que a Fifa considera como data oficial do surgimento do futebol o ano de 1863, quando foi fundada na Inglaterra The Football Association, a organização responsável pela gestão do futebol naquele país.</i></font></h3></p>
+    <br>
+    <br>
+    <center><img src="https://img.freepik.com/fotos-gratis/jogador-de-futebol-masculino-com-bola-no-campo-de-grama_23-2150821530.jpg?size=338&ext=jpg&ga=GA1.1.2116175301.1717804800&semt=ais_user"></center>
+    <br>
+    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+</body>
+</html>
+
+Basquete.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - LIMA</title>
+</head>
+<body background="https://s1.1zoom.me/b7068/853/Basketball_Ball_565959_1920x1080.jpg">
+    <p><b><font size="10" color="white" face="BatmanForeverAlternate">A Historia do Basquete</b></p></font>
+    <p><h3><i><font color="white" face="Arial">"O surgimento do basquete ocorreu no ano de 1891, nos Estados Unidos. O idealizador do esporte foi o canadense James Naismith, um professor de Educação Física que, na época, lecionava na Associação Cristã de Moços de Springfield, em Massachusetts.
+        O educador foi convidado para ajudar no desenvolvimento de um jogo que pudesse ser praticado durante o inverno, em local fechado, já que o frio intenso impedia os jovens de jogarem ao ar livre. A intenção era que a nova atividade fosse facilmente adaptável, composta por exercícios completos e que não estimulasse a violência tal como acontecia com o futebol americano.
+        Nesse contexto, Naismith idealizou uma prática que tivesse um alvo fixo, o uso de uma bola para ser arremessada nesse alvo, a cesta, e que fosse praticado por duas equipes. Inicialmente, foram utilizadas cestas de pêssegos, que não eram vazadas. Esses alvos foram colocados a 3,05 metros de altura, até hoje a medida oficial.
+        Foram criadas pelo professor canadense 13 regras para o jogo, as quais prevaleceram por 50 anos sem serem modificadas. Nas regras originais do esporte, não era permitido o drible/quicar a bola pelos participantes.
+        A primeira partida de basquetebol da história aconteceu em 21 de dezembro de 1891. O jogo foi formado por dois tempos de 15 minutos e contou com nove jogadores em cada equipe.
+        Ao saber do esporte, a judia, lituana e professora de Educação Física Senda Berenson Abbott foi a responsável por difundir o basquete entre as mulheres no Smith College, nos Estados Unidos, em 1892. Ela chegou a conversar com o próprio Naismith para conhecer melhor a prática.
+        O basquete feminino foi difundido por Senda Berenson, em 1892.
+        Poucos anos após a criação, o basquete foi utilizado como esporte demonstração nos Jogos Olímpicos de 1904, em Saint Louis, Missouri, nos Estados Unidos. Porém a inclusão oficial na Olimpíada ocorreria 32 anos mais tarde, em Berlim, Alemanha.
+        A instituição responsável pela organização e regulamentação do basquete no mundo é a Fiba, criada em junho de 1932, com sede na cidade de Mies, na Suíça.  
+        Nos Estados Unidos, as quadras de basquete se tornaram um dos principais cenários da luta da comunidade negra em prol de direitos e igualdade. Historicamente, vários atletas negros se tornaram grandes nomes e protagonistas do esporte, como Kareem Abdul-Jabbar, Bill Russell, Wilt Chamberlain, Magic Johnson, Kobe Bryant, LeBron James e Michael Jordan, este último considerado o maior da história.
+        O basquete estadunidense consolidou uma forte conexão com a cultura popular, especificamente com o hip-hop e o R&B. Essa relação foi tema de várias obras cinematográficas como Space Jam, Homens brancos não conseguem enterrar e Coach Carter."
+</i></font></h3></p>
+    <br>
+    <br>
+    <center><img src="https://s5.static.brasilescola.uol.com.br/be/2023/06/mulheres-da-selecao-brasileira-de-volei-fazem-bloqueio-em-partida.jpg"></center>
+    <br>
+    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+</body>
+</html>
+
+Volei.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - LIMA</title>
+</head>
+<body background="https://wallpapers.com/images/hd/volleyball-ball-fkf82lhvt7zul6qt.jpg">
+    <p><b><font size="10" color="white" face="BatmanForeverAlternate">Julia Calhau</b></p></font>
+    <p><h3><i><font color="white">Vólei é um desporto praticado numa quadra dividida em duas partes por uma rede, possuindo duas equipes de seis jogadores em cada lado. O objetivo da modalidade é fazer passar a bola sobre a rede de modo a que esta toque no chão dentro da quadra adversária, ao mesmo tempo que se evita que os adversários consigam fazer o mesmo. O voleibol é um desporto olímpico, regulado pela Fédération Internationale de Volleyball (FIVB). O voleibol foi inventado em 9 de Fevereiro de 1895 por William George Morgan nos Estados Unidos da América. 
+        O objetivo de Morgan, que trabalhava na ACM de Holyoke no Massachusetts, era criar um esporte de equipes sem contato físico entre os adversários de modo a minimizar os riscos de lesão. Inicialmente jogava-se com uma câmara de ar da bola de basquetebol e foi chamado Mintonette, mas rapidamente ganhou popularidade com o nome de volleyball. 
+        O criador do voleibol faleceu em 27 de dezembro de 1942 aos 72 anos de idade. Um time que deseja competir em nível internacional precisa dominar um conjunto de seis habilidades básicas, denominadas usualmente sob a rubrica "fundamentos". Elas são: saque, passe, levantamento, ataque, bloqueio e defesa. 
+        A cada um destes fundamentos compreende um certo número de habilidades e técnicas que foram introduzidas ao longo da história do voleibol e são hoje consideradas prática comum no esporte.</i></font></h3></p>
+    <br>
+    <br>
+    <center><img src="https://seeklogo.com/images/S/senai-logo-DD8DA4BFBE-seeklogo.com.png"></center>
+    <br>
+    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+</body>
+</html>
