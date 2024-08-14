@@ -1,0 +1,178 @@
+##Back
+#api.js
+// Dependencias a serem instaladas:
+// npm init
+// npm i express cors mysql
+// npm install body-parser - fas a analise dos dados de entrada contidos
+// disponibilizando as propriedades em req.body
+
+// Delarando as bibliotecas!!
+const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors");
+const porta = 3000;
+const bodyParser = require("body-parser");
+
+// Conectar com o Banco de dados
+const con = mysql.createConnection({
+    user: 'root',
+    host: 'localhost',
+    database: 'biblioteca'
+})
+
+const create = (req, res) =>{
+    //Declarar os campos necessários
+    let autorLivro = req.body.autorLivro;
+    let descricaoLivro = req.body.descricaoLivro;
+
+    //Conexão com o banco de dados
+    let query = `INSERT INTO Livros (autorLivro, descricaoLivro) VALUE`
+    query += `('${autorLivro}','${descricaoLivro}');`;
+    con.query(query, (err, result) => {
+        if (err) {
+            res.redirect("http://127.0.0.1:5500/biblioteca/front/erro.html")
+        } else {
+            res.redirect("http://127.0.0.1:5500/biblioteca/front/index.html")
+        }
+    })
+}
+
+const read = (req, res) =>{
+    con.query("SELECT * FROM Livros", (err, result)=>{
+        if (err) {
+            res.status(500).json(err)
+        } else {
+            res.json(result)
+        }
+    })
+}
+// Esse teste, ira aparecer na pagina web
+const teste = (req, res) => {
+    res.send("Api respondendo com sucesso!!");
+}
+
+// Configuração de saída para o front-end
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}))
+
+// Rotas de saída
+app.get("/", teste);
+app.post("/livros", create);
+app.get("/livros", read);
+
+// Teste no console
+app.listen(3000, ()=>{
+    console.log("Servidor respondendo na porta: ", porta);
+})
+
+##Front
+#erro.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body bgcolor="black">
+<img src="https://giffiles.alphacoders.com/354/35481.gif"></a>
+</body>
+</html>
+
+# index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="div1">
+            <h1>Cadastre um autor</h1>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="container_formulario">
+            <form action="http://localhost:3000/livros" method="post">
+
+                <input type="text" name="autorLivro" placeholder="Digite o seu nome: ">
+                <br>
+                <input type="text" name="descricaoLivro" placeholder="Descrição do livro">
+                <br>
+                <input type="submit" value="Enviar" id="botao">
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
+Style
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+
+.container{
+    width: 100%;
+    background: black;
+    color: rgb(226, 226, 226);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_formulario{
+    width: 35%;
+    height: 350px;
+    background: rgb(205, 204, 204);
+    border-color: black;
+    border: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+input{
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#botao{
+    width: 100px;
+    background: rgb(96, 96, 172);
+    color: white;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
