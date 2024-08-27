@@ -1,0 +1,395 @@
+##academia
+#(back)#
+#api.js
+// Dependencias a serem instaladas:
+// npm init
+// npm i express cors mysql
+// npm install body-parser - fas a analise dos dados de entrada contidos
+// disponibilizando as propriedades em req.body
+
+// Delarando as bibliotecas!!
+const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors");
+const porta = 3000;
+const bodyParser = require("body-parser");
+
+// Conectar com o Banco de dados
+const con = mysql.createConnection({
+    user: 'root',
+    host: 'localhost',
+    database: 'academia'
+})
+
+const create = (req, res) =>{
+    //Declarar os campos necessários
+    let nome = req.body.nome;
+    let telefone = req.body.telefone;
+    let cpf = req.body.cpf;
+    let endereco = req.body.endereco;
+    let rg = req.body.rg;
+    let pagamento = req.body.pagamento;
+    let datanascimento = req.body.datanascimento;
+
+    //Conexão com o banco de dados
+    let query = `INSERT INTO Livros (autorLivro, descricaoLivro) VALUE`
+    query += `('${nome}','${telefone}','${cpf}','${endereco}','${rg}','${telefone}','${pagamento}','${datanascimento}');`;
+    con.query(query, (err, result) => {
+        if (err) {
+            res.redirect("http://127.0.0.1:5500/Academia/front/erro.html")
+        } else {
+            res.redirect("http://127.0.0.1:5500/Academia/front/index.html")
+        }
+    })
+}
+
+const read = (req, res) =>{
+    con.query("SELECT * FROM Livros", (err, result)=>{
+        if (err) {
+            res.status(500).json(err)
+        } else {
+            res.json(result)
+        }
+    })
+}
+// Esse teste, ira aparecer na pagina web
+const teste = (req, res) => {
+    res.send("Api respondendo com sucesso!!");
+}
+
+// Configuração de saída para o front-end
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}))
+
+// Rotas de saída
+app.get("/", teste);
+app.post("/livros", create);
+app.get("/livros", read);
+
+// Teste no console
+app.listen(3000, ()=>{
+    console.log("Servidor respondendo na porta: ", porta);
+})
+
+#(front)#
+#erro.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body bgcolor="black">
+<img src="https://giffiles.alphacoders.com/354/35481.gif"></a>
+</body>
+</html>
+
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="div1">
+            <font color="red"><h1>Academia Senai</font></h1>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="container_formulario">
+            <form action="http://localhost:3000/livros" method="post">
+                <form action="" method="">    
+                    <label for="nome"><font color="White">Nome</font></label>
+                    <input type="text" id="nome" placeholder="Digite o seu nome: " required/>
+                    <br>
+
+                    <label for="datanascimento"><font color="White">Data de Nascimento</font></label>
+                    <input type="date" id="datanascimento">
+                    <br>
+
+                    <label for="telefone"><font color="White">Telefone</font></label>
+                    <input type="tel" id="telefone" placeholder="Digite o seu Telefone" required/>
+                    <br>
+
+                    <label for="cpf"><font color="White">CPF</font></label>
+                    <input type="text" id="cpf" placeholder="exemplo: 000.000.000-00" required/>
+                    <br>
+
+                    <label for="endereco"><font color="White">Endereço</font></label>
+                    <input type="text" id="endereco" placeholder="Digite o seu Endereço" required/>
+                    <br>
+
+                    <label for="rg"><font color="White">RG</font></label>
+                    <input type="text" id="rg" placeholder="Digite o seu RG" required/>
+                    <br>
+
+                    <fieldset>
+                        <legend><font color="White">Forma de Pagamento</font></legend>
+                        <label for="credito"><font color="White">Cartão de crédito</font></label>
+                        <input type="radio" id="credito" name="pagamento"/><br>
+
+                        <label for="debito"><font color="white">Cartão de débito</font></label>
+                        <input type="radio" id="debito" name="pagamento"/><br>
+            
+                        <label for="pix"><font color="White">Pix</font></label>
+                        <input type="radio" id="pix" name="pagamento"/><br>
+                    </fieldset>
+            
+                <input type="submit" value="Enviar" id="botao">
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+#style.css
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+.container{
+    width: 100%;
+    background: rgb(14, 14, 14);
+    color: rgb(226, 226, 226);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_formulario{
+    width: 35%;
+    height: 350px;
+    background: rgb(104, 104, 104);
+    border-color: black;
+    border: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 150px;
+}
+
+input{
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#botao{
+    width: 100px;
+    background: rgb(96, 96, 172);
+    color: white;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+#(back)#
+##biblioteca
+#api.js
+// Dependencias a serem instaladas:
+// npm init
+// npm i express cors mysql
+// npm install body-parser - fas a analise dos dados de entrada contidos
+// disponibilizando as propriedades em req.body
+
+// Delarando as bibliotecas!!
+const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors");
+const porta = 3000;
+const bodyParser = require("body-parser");
+
+// Conectar com o Banco de dados
+const con = mysql.createConnection({
+    user: 'root',
+    host: 'localhost',
+    database: 'biblioteca'
+})
+
+const create = (req, res) =>{
+    //Declarar os campos necessários
+    let autorLivro = req.body.autorLivro;
+    let descricaoLivro = req.body.descricaoLivro;
+
+    //Conexão com o banco de dados
+    let query = `INSERT INTO Livros (autorLivro, descricaoLivro) VALUE`
+    query += `('${autorLivro}','${descricaoLivro}');`;
+    con.query(query, (err, result) => {
+        if (err) {
+            res.redirect("http://127.0.0.1:5500/biblioteca/front/erro.html")
+        } else {
+            res.redirect("http://127.0.0.1:5500/biblioteca/front/index.html")
+        }
+    })
+}
+
+const read = (req, res) =>{
+    con.query("SELECT * FROM Livros", (err, result)=>{
+        if (err) {
+            res.status(500).json(err)
+        } else {
+            res.json(result)
+        }
+    })
+}
+// Esse teste, ira aparecer na pagina web
+const teste = (req, res) => {
+    res.send("Api respondendo com sucesso!!");
+}
+
+// Configuração de saída para o front-end
+const app = express();
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}))
+
+// Rotas de saída
+app.get("/", teste);
+app.post("/livros", create);
+app.get("/livros", read);
+
+// Teste no console
+app.listen(3000, ()=>{
+    console.log("Servidor respondendo na porta: ", porta);
+})
+
+#(front)#
+#erro.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body bgcolor="black">
+<img src="https://giffiles.alphacoders.com/354/35481.gif"></a>
+</body>
+</html>
+
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="div1">
+            <h1>Cadastre um autor</h1>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="container_formulario">
+            <form action="http://localhost:3000/livros" method="post">
+
+                <input type="text" name="autorLivro" placeholder="Digite o seu nome: ">
+                <br>
+                <input type="text" name="descricaoLivro" placeholder="Descrição do livro">
+                <br>
+                <input type="submit" value="Enviar" id="botao">
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
+#style.css
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+
+.container{
+    width: 100%;
+    background: black;
+    color: rgb(226, 226, 226);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div1{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_formulario{
+    width: 35%;
+    height: 350px;
+    background: rgb(205, 204, 204);
+    border-color: black;
+    border: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+input{
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#botao{
+    width: 100px;
+    background: rgb(96, 96, 172);
+    color: white;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
