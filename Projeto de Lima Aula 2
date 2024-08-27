@@ -1,4 +1,4 @@
-Inicio.html
+#Inicio.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +11,16 @@ Inicio.html
     <br>
     <center><img src="https://i.pinimg.com/originals/ad/a3/c7/ada3c7b0d94c2159e156adcbd2a8f9cd.gif"></center>
     <p><h5><font face="Arial">A Historia do Futebol</font></h5></p>
-    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Futebol.html">Futebol</a>
+    <a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Futebol.html">Futebol</a>
     <p><h5><font face="Arial">A Historia do Basquete</font></h5></p>
-    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Basquete.Html">Basquete</a>
+    <a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Basquete.Html">Basquete</a>
     <p><h5><font face="Arial">A Historia do Volei</font></h5></p>
-    <a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Volei.html">Volei</a>
+    <a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Volei.html">Volei</a>
+
 </body>
 </html>
 
-Futebol.html
+#Futebol.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +48,11 @@ Futebol.html
     <br>
     <center><img src="https://img.freepik.com/fotos-gratis/jogador-de-futebol-masculino-com-bola-no-campo-de-grama_23-2150821530.jpg?size=338&ext=jpg&ga=GA1.1.2116175301.1717804800&semt=ais_user"></center>
     <br>
-    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+    <center><a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
 </body>
 </html>
 
-Basquete.html
+#Basquete.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,13 +76,13 @@ Basquete.html
 </i></font></h3></p>
     <br>
     <br>
-    <center><img src="https://s5.static.brasilescola.uol.com.br/be/2023/06/mulheres-da-selecao-brasileira-de-volei-fazem-bloqueio-em-partida.jpg"></center>
+    <center><img src="https://s1.static.brasilescola.uol.com.br/be/2022/08/basquete.jpg"></center>
     <br>
-    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+    <center><a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
 </body>
 </html>
 
-Volei.html
+#Volei.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,8 +98,8 @@ Volei.html
         A cada um destes fundamentos compreende um certo número de habilidades e técnicas que foram introduzidas ao longo da história do voleibol e são hoje consideradas prática comum no esporte.</i></font></h3></p>
     <br>
     <br>
-    <center><img src="https://seeklogo.com/images/S/senai-logo-DD8DA4BFBE-seeklogo.com.png"></center>
+    <center><img src="https://s5.static.brasilescola.uol.com.br/be/2023/06/mulheres-da-selecao-brasileira-de-volei-fazem-bloqueio-em-partida.jpg"></center>
     <br>
-    <center><a href="file:///C:/Users/Aluno/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
+    <center><a href="file:///C:/Users/Desenvolvimento/Documents/Diego_Maradona/Olimpiadas/Projeto/Inicio.html">Voltar para pagina Principal</a></center>
 </body>
 </html>
