@@ -60,3 +60,143 @@
 </body>
 </html>
 #style.css
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(83, 199, 160);
+}
+
+header {
+    width: 100%;
+}
+    
+.containerheader {
+    width: 100%;
+    background: rgb(53, 53, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+    & .containerLogo {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+    }
+    & .containerMenu {
+        width: 60%;
+    }
+    & .containerMenu nav {
+        padding: 15px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+    & .containerMenu nav a {
+        color: white;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
+        text-decoration: none;
+    }
+    
+    & .containerMenu nav a:hover{
+        color: white;
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 10px;
+        transition: 0.25s;
+        background: rgb(16, 179, 138);
+        border-radius: 8px;
+    }
+}
+    
+main{
+    width: 100%;
+    
+    & .containerStart {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    & .containerStart nav {
+        color: white;
+        font-size: 50px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    & .containerStart nav a {
+        color: white;
+        font-size: 50px;
+        padding: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+    }
+    
+    & .containerStart nav a:hover{
+        color: white;
+        font-size: 45px;
+        transition: 2.0s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    & .divtexto{
+        color: white;
+        font-size: 18px;
+        transition: 2.0s;
+        border-radius: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .divimagem img{
+        width: 250px;
+        transition: 2.0s;
+        border-radius: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    & .containerlinhas{
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .divlinhaesquerda img{
+        width: 70px;
+        transition: 2.0s;
+        border-radius: 16px;
+        display: flex;
+        align-items:center;
+        justify-content: left;
+    }
+
+    & .divimagem2 img{
+        width: 45px;
+        transition: 2.0s;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .divlinhadireita img{
+        width: 70px;
+        transition: 2.0s;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+}
