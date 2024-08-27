@@ -1,0 +1,62 @@
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="containerheader">
+        <div class="containerLogo">
+            <font face="Arial"><a><b><h3>START BOOTSTRAP</font></h3></b></a>
+        </div>
+        <div class="containerMenu">
+            <nav>
+                <b><a href="index.html">PORTFOLIO</a></b>
+                <b><a href="quemsomos.html">ABOUT</a></b>
+                <b><a href="contato.html">CONTACT</a></b>
+            </nav>
+        </div>
+     </div>
+</header>
+    <main>
+        <br>
+        <br>
+        <div class="containverdiv">
+            <br>
+            <br>
+            <br>
+            <div class="divimagem">
+                <center><img src="avatar1.png"></center>
+            </div>
+            <center><div class="containerStart">
+                <nav>
+                    <center><font face="Arial"><h1><b><a href="bootstrap.html">START BOOTSTRAP</font></a></b></h1></center>
+                </nav>
+            </div></center>
+            <br>
+            <center><div class="containerlinhas">
+                    <div class="divlinhaesquerda">
+                        <img src="white-line.png">
+                    </div>
+                    <div class="divimagem2">
+                        <img src="white-star-icon-13227.png">
+                    </div>
+                    <div class="divlinhadireita">
+                        <img src="white-line.png">
+                    </div>
+                </center>
+            </div>
+            <center><div class="divtexto">
+                <span>
+                    Graphic Artist - Web Designer - Illustrator
+                </span>
+            </div></center>
+        </div>
+    </main>
+</body>
+</html>
+#style.css
