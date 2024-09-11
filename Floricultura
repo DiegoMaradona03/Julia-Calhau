@@ -1,0 +1,68 @@
+CREATE DATABASE Floricultura;
+USE Floricultura;
+
+-- Criação das tabelas
+
+-- Tabela: Cliente
+CREATE TABLE Cliente (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    telefone VARCHAR(15),
+    data_nascimento DATE NOT NULL,
+    endereco VARCHAR(255) NOT NULL
+);
+
+-- Tabela: Fornecedor
+CREATE TABLE Fornecedor (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    id_flores INTEGER,
+    cnpj VARCHAR(18) UNIQUE NOT NULL,
+    telefone VARCHAR(15),
+    FOREIGN KEY (id_flores) REFERENCES Flores(id)
+);
+
+-- Tabela: Flores
+CREATE TABLE Flores (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    data_aula DATETIME NOT NULL,
+    cor VARCHAR(50) NOT NULL,
+    quantidade INT NOT NULL,
+    preco INT NOT NULL
+);
+
+-- Tabela: Compras
+CREATE TABLE Compras (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INTEGER NOT NULL,
+    id_flores INTEGER NOT NULL,
+    quantidade INT NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id),
+    FOREIGN KEY (id_flores) REFERENCES Flores(id)
+);
+
+-- Inserts para a tabela Cliente
+INSERT INTO Cliente (nome, email, telefone, data_nascimento, endereco) VALUES
+('Maria Oliveira', 'maria.oliveira@example.com', '11987654321', '2000-05-15', 'Rua 1, 563'),
+('João Silva', 'joao.silva@example.com', '11923456789', '1995-08-25', 'Rua 2, 643'),
+('Ana Costa', 'ana.costa@example.com', '11934567890', '1990-12-10', 'Rua 2, 143');
+
+-- Inserts para a tabela Fornecedor
+INSERT INTO Fornecedor (nome, endereco, id_flores, cnpj, telefone) VALUES
+('Floricultura Verde', 'Avenida das Flores, 123', 1, '12.345.678/0001-95', '1199998888'),
+('Floricultura Jardim', 'Rua das Orquídeas, 456', 2, '98.765.432/0001-12', '1198887777');
+
+-- Inserts para a tabela Flores
+INSERT INTO Flores (nome, data_aula, cor, quantidade, preco) VALUES
+('Rosa', '2024-09-01 08:00:00', 'Vermelha', 100, 15),
+('Tulipa', '2024-09-02 08:00:00', 'Amarela', 50, 10);
+
+-- Inserts para a tabela Compras
+INSERT INTO Compras (id_cliente, id_flores, quantidade, valor) VALUES
+(1, 1, 10, 150.00),
+(2, 2, 5, 50.00),
+(3, 1, 7, 105.00);
