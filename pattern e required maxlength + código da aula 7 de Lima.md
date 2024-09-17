@@ -156,7 +156,8 @@ Neste exemplo, o campo "Password" deve ser preenchido e não pode ter mais do qu
 
 ### **server.js**
 
-```// Dependencias framework's
+```js
+// Dependencias framework's
 const express = require('express')
 const cors = require('cors')
 const routes = require('./src/routes')
@@ -193,12 +194,13 @@ const create = (req, res) =>{
             res.redirect("http://127.0.0.1:5500/Academia/front/index.html")
         }
     })
-}
+}```
 
 
 ## **Front**
 
 ### **CSS**
+```css
 *{
     margin: 0;
     padding: 0;
@@ -260,9 +262,9 @@ input{
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-}
+}```
 
-### **HTML**
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -352,4 +354,4 @@ input{
     </div>
 </div>
 </body>
-</html>
+</html>```
