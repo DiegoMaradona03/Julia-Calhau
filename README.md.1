@@ -1,4 +1,4 @@
-# **O código está no final**
+***O código está no final***
 
 # **pattern**
 
@@ -11,19 +11,16 @@ Quando você usa o atributo pattern, o navegador valida o valor do campo com bas
 Se o valor não corresponder ao padrão, o navegador exibe uma mensagem de erro e impede o envio do formulário.
 
 ### **Exemplo:**
-<input type="text" pattern="[A-Za-z]{3,}" title="O valor deve ter pelo menos 3 letras">
-Neste exemplo:
-
-pattern="[A-Za-z]{3,}" especifica que o valor deve ter pelo menos 3 letras (maiúsculas ou minúsculas).
-title="O valor deve ter pelo menos 3 letras" fornece uma mensagem de erro amigável que será exibida se o valor não corresponder ao padrão.
+input type="text" pattern="[A-Za-z]{3,}" title="O valor deve ter pelo menos 3 letras"
 
 ### **Neste exemplo:**
 pattern="[A-Za-z]{3,}" especifica que o valor deve ter pelo menos 3 letras (maiúsculas ou minúsculas).
+
 title="O valor deve ter pelo menos 3 letras" fornece uma mensagem de erro amigável que será exibida se o valor não corresponder ao padrão.
 
 ### **Outros Exemplos de Uso**
 ### Validação de Email
-pattern="[a-zA-Z0-9._%+-]+@(gmail\.com|googlemail\.com)"
+pattern="[a-zA-Z0-9._%+-]+@(gmail\\.com|googlemail\.com)"
 
 ### Número de Telefone
 pattern="\(\d{2}\) \d{4,5}-\d{4}"
@@ -42,10 +39,10 @@ pattern="\d{4} \d{4} \d{4} \d{4}"
 pattern="[A-Za-z0-9]{6}"
 
 ### Endereço de IPv4
-pattern="\b(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\b"
+pattern="\b(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\b"
 
 ### CNPJ (Cadastro Nacional da Pessoa Jurídica)
-pattern="\d{2}\.\d{3}\.\d{3}/0001-\d{2}"
+pattern="\d{2}\\.\d{3}\\.\d{3}/0001-\d{2}"
 
 ### Número de Matrícula
 pattern="\d{6}"
@@ -54,10 +51,10 @@ pattern="\d{6}"
 pattern="[A-Za-z\s]+"
 
 ### CPF
-pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+pattern="\d{3}\\.\d{3}\\.\d{3}-\d{2}"
 
 ### RG
-pattern="\d{2}\.\d{3}\.\d{3}-\d{1}"
+pattern="\d{2}\\.\d{3}\\.\d{3}-\d{1}"
 
 ## **1. Hífen (-)**
 O hífen é usado dentro de um conjunto de caracteres ([]) para especificar um intervalo. Por exemplo:
@@ -69,14 +66,17 @@ O hífen é usado dentro de um conjunto de caracteres ([]) para especificar um i
 Quando usado fora de um conjunto de caracteres, o hífen é interpretado como um literal. 
 Por exemplo, no padrão \d{3}-\d{2}-\d{4}, o hífen é tratado como um caractere literal que deve estar presente entre os grupos de dígitos.
 
-## **2. Barra Invertida (\)**
+## **2. Barra Invertida (\\)**
 A barra invertida é usada para escapar caracteres especiais e para introduzir sequências de caracteres especiais. 
 Por exemplo:
 
 \d: corresponde a qualquer dígito (equivalente a [0-9]).
+
 \w: corresponde a qualquer caractere de palavra (letras, dígitos e o sublinhado, equivalente a [a-zA-Z0-9_]).
+
 \s: corresponde a qualquer caractere de espaço em branco (espaço, tabulação, nova linha, etc.).
-\.: corresponde a um ponto literal (sem o escape, o ponto corresponde a qualquer caractere).
+
+\\.: corresponde a um ponto literal (sem o escape, o ponto corresponde a qualquer caractere).
 
 ## **4. Parênteses (())**
 Os parênteses são usados para agrupar partes da expressão regular e criar grupos. 
@@ -85,9 +85,13 @@ Grupos podem ser usados para aplicar quantificadores a uma parte da expressão o
 ### **Por exemplo:**
 
 (abc)+: corresponde a uma ou mais ocorrências da sequência abc.
+
 (\d{2}){3}: corresponde a três grupos de dois dígitos.
+
 (\d{3}-)?\d{2}: Corresponde a dois dígitos, opcionalmente precedidos por três dígitos seguidos de um hífen.
+
 (\d{3})-(\d{2}): Corresponde a três dígitos seguidos por um hífen e dois dígitos.
+
 
 ## **\d**
 \d é um atalho para qualquer dígito. É equivalente a [0-9]. Ele é usado para corresponder a números de forma geral.
@@ -106,14 +110,14 @@ Exemplos de Uso:
 ## **\s**
 Descrição: Corresponde a qualquer caractere de espaço em branco (espaço, tabulação, nova linha, etc.). Equivalente a [ \t\n\r\f\v].
 Exemplos de Uso:
-\s+: Corresponde a um ou mais caracteres de espaço em branco (por exemplo, ).
-\s{2,4}: Corresponde a entre dois e quatro caracteres de espaço em branco (por exemplo, ou ).
+\s+: Corresponde a um ou mais caracteres de espaço em branco
+\s{2,4}: Corresponde a entre dois e quatro caracteres de espaço em branco
 
-## **\.**
+## **\\.**
 Descrição: Corresponde a um ponto literal (.). Sem o escape, o ponto corresponde a qualquer caractere.
 Exemplos de Uso:
-\d{3}\.: Corresponde a três dígitos seguidos por um ponto literal (por exemplo, 123.).
-example\.com: Corresponde ao texto literal example.com.
+\d{3}\\.: Corresponde a três dígitos seguidos por um ponto literal (por exemplo, 123.).
+example\\.com: Corresponde ao texto literal example.com.
 
 
 # **required maxlength**
@@ -127,25 +131,32 @@ Limitação de Entrada: Restringe o comprimento máximo dos dados que podem ser 
 Prevenção de Dados Excessivos: Evita que o usuário insira mais caracteres do que o permitido.
 
 ## **Uso**
-Campo de Texto: <input type="text" maxlength="10">
-Área de Texto: <textarea maxlength="200"></textarea>
+Campo de Texto: input type="text" maxlength="10"
+
+Área de Texto: textarea maxlength="200" /textarea
 
 ### **Exemplo:**
-<input type="text" id="username" name="username" maxlength="15">
+input type="text" id="username" name="username" maxlength="15"
+
 Neste exemplo, o campo "Username" permite no máximo 15 caracteres.
 
 ## **Combinando required e maxlength**
 Você pode usar required e maxlength juntos para garantir que o campo seja preenchido e que o valor inserido não exceda um determinado comprimento.
+
 ## **Exemplo:**
- <input type="password" id="password" name="password" required maxlength="20">
+input type="password" id="password" name="password" required maxlength="20"
+
 Neste exemplo, o campo "Password" deve ser preenchido e não pode ter mais do que 20 caracteres.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### foi mal pessoal eu tentei fazer ficar desgrudado os códigos um do outro mas não consegui achar um jeito para isso, porem é possivel reparar que os topicos estão separados através de "##Front", "### **CSS**", "### **HTML**"
 # **Código da aula 7 de Lima:**
 
 ## **Back**
+
 ### **server.js**
-// Dependencias framework's
+
+```// Dependencias framework's
 const express = require('express')
 const cors = require('cors')
 const routes = require('./src/routes')
