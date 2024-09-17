@@ -149,12 +149,9 @@ input type="password" id="password" name="password" required maxlength="20"
 Neste exemplo, o campo "Password" deve ser preenchido e não pode ter mais do que 20 caracteres.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### foi mal pessoal eu tentei fazer ficar desgrudado os códigos um do outro mas não consegui achar um jeito para isso, porem é possivel reparar que os topicos estão separados através de "##Front", "### **CSS**", "### **HTML**"
 # **Código da aula 7 de Lima:**
 
-## **Back**
-
-### **server.js**
+## **Server.js**
 
 ```js
 // Dependencias framework's
@@ -194,12 +191,11 @@ const create = (req, res) =>{
             res.redirect("http://127.0.0.1:5500/Academia/front/index.html")
         }
     })
-}```
+}
+```
 
+## **CSS**
 
-## **Front**
-
-### **CSS**
 ```css
 *{
     margin: 0;
@@ -262,7 +258,10 @@ input{
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-}```
+}
+```
+
+## **HTML**
 
 ```html
 <!DOCTYPE html>
@@ -354,4 +353,5 @@ input{
     </div>
 </div>
 </body>
-</html>```
+</html>
+```
