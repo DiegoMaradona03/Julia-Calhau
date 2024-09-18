@@ -1,0 +1,30 @@
+HTML
+<form id="myForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required maxlength="15" placeholder="Digite seu username">
+    <span class="error-message" id="error-message" style="display:none;">O campo é obrigatório e deve ter no máximo 15 caracteres.</span>
+    <input type="submit" value="Enviar">
+</form>
+CSS
+input.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+JS
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    const usernameInput = document.getElementById('username');
+    const errorMessage = document.getElementById('error-message');
+    
+    if (!usernameInput.value) {
+        usernameInput.classList.add('error');
+        errorMessage.style.display = 'block';
+        event.preventDefault(); // Impede o envio do formulário
+    } else {
+        usernameInput.classList.remove('error');
+        errorMessage.style.display = 'none';
+    }
+});
