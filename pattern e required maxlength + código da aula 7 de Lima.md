@@ -1,4 +1,4 @@
-***O código está no final***
+***O código da aula 7 de lima está no final***
 
 # **pattern**
 
@@ -11,8 +11,9 @@ Quando você usa o atributo pattern, o navegador valida o valor do campo com bas
 Se o valor não corresponder ao padrão, o navegador exibe uma mensagem de erro e impede o envio do formulário.
 
 ### **Exemplo:**
-input type="text" pattern="[A-Za-z]{3,}" title="O valor deve ter pelo menos 3 letras"
-
+```
+<input type="text" pattern="[A-Za-z]{3,}">
+```
 ### **Neste exemplo:**
 pattern="[A-Za-z]{3,}" especifica que o valor deve ter pelo menos 3 letras (maiúsculas ou minúsculas).
 
@@ -20,42 +21,54 @@ title="O valor deve ter pelo menos 3 letras" fornece uma mensagem de erro amigá
 
 ### **Outros Exemplos de Uso**
 ### Validação de Email
-pattern="[a-zA-Z0-9._%+-]+@(gmail\\.com|googlemail\.com)"
-
+```
+<input type="email" pattern="[a-zA-Z0-9._%+-]+@(gmail\\.com|googlemail\.com)"
+```
 ### Número de Telefone
-pattern="\(\d{2}\) \d{4,5}-\d{4}"
-
+```
+<input type="tel" pattern="\(\d{2}\) \d{4,5}-\d{4}">
+```
 ### Número de Documento de Identidade
 Para um número de identidade com 9 dígitos, por exemplo, no formato "123-456-789"
-pattern="\d{3}-\d{3}-\d{3}"
-
+```
+<input type="text" pattern="\d{3}-\d{3}-\d{3}">
+```
 ### URL
-pattern="https?://.+"
-
+```
+<input type="url" pattern="https?://.+">
+```
 ### Número de Cartão de Crédito
-pattern="\d{4} \d{4} \d{4} \d{4}"
-
+```
+<input type="text" pattern="\d{4} \d{4} \d{4} \d{4}">
+```
 ### Código de Acesso com Letras e Números
-pattern="[A-Za-z0-9]{6}"
-
+```
+<input type="text" pattern="[A-Za-z0-9]{6}">
+```
 ### Endereço de IPv4
-pattern="\b(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\b"
-
+```
+<input type="text" pattern="\b(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\b">
+```
 ### CNPJ (Cadastro Nacional da Pessoa Jurídica)
-pattern="\d{2}\\.\d{3}\\.\d{3}/0001-\d{2}"
-
+```
+<input type="text" pattern="\d{2}\.\d{3}\.\d{3}/0001-\d{2}">
+```
 ### Número de Matrícula
-pattern="\d{6}"
-
+```
+<input type="text" pattern="\d{6}">
+```
 ### Nome (verdadeiro)
-pattern="[A-Za-z\s]+"
-
+```
+<input type="text" pattern="[A-Za-z\s]+">
+```
 ### CPF
-pattern="\d{3}\\.\d{3}\\.\d{3}-\d{2}"
-
+```
+<input type="text" pattern="\d{3}\\.\d{3}\\.\d{3}-\d{2}">
+```
 ### RG
-pattern="\d{2}\\.\d{3}\\.\d{3}-\d{1}"
-
+```
+<input type="text" pattern="\d{2}\\.\d{3}\\.\d{3}-\d{1}">
+```
 ## **1. Hífen (-)**
 O hífen é usado dentro de um conjunto de caracteres ([]) para especificar um intervalo. Por exemplo:
 
@@ -131,24 +144,29 @@ Limitação de Entrada: Restringe o comprimento máximo dos dados que podem ser 
 Prevenção de Dados Excessivos: Evita que o usuário insira mais caracteres do que o permitido.
 
 ## **Uso**
-Campo de Texto: input type="text" maxlength="10"
-
-Área de Texto: textarea maxlength="200" /textarea
-
+Campo de Texto: 
+```
+<input type="text" maxlength="10">
+```
+Área de Texto: 
+```
+<textarea maxlength="200"></textarea>
+```
 ### **Exemplo:**
-input type="text" id="username" name="username" maxlength="15"
-
+```
+<input type="text" id="username" name="username" maxlength="15">
+```
 Neste exemplo, o campo "Username" permite no máximo 15 caracteres.
 
 ## **Combinando required e maxlength**
 Você pode usar required e maxlength juntos para garantir que o campo seja preenchido e que o valor inserido não exceda um determinado comprimento.
 
 ## **Exemplo:**
-input type="password" id="password" name="password" required maxlength="20"
-
+```
+<input type="password" id="password" name="password" required maxlength="20">
+```
 Neste exemplo, o campo "Password" deve ser preenchido e não pode ter mais do que 20 caracteres.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # **Código da aula 7 de Lima:**
 
 ## **Server.js**
@@ -173,6 +191,7 @@ const create = (req, res) =>{
     let nome = req.body.nome;
     let cpf = req.body.cpf;
     let rg = req.body.rg;
+    let email = req.body.email;
     let telefone = req.body.telefone;
     let plano = req.body.plano;
     let pagamento = req.body.pagamento;
@@ -183,7 +202,7 @@ const create = (req, res) =>{
 
     //Conexão com o banco de dados
     let query = `INSERT INTO Livros (aluno) VALUE`
-    query += `('${nome}','${cpf}','${rg}','${telefone}','${plano}','${pagamento}','${endereco}','${bairro}','${cidade}','${datanascimento}');`;
+    query += `('${nome}','${cpf}','${rg}',${email},'${telefone}','${plano}','${pagamento}','${endereco}','${bairro}','${cidade}','${datanascimento}');`;
     con.query(query, (err, result) => {
         if (err) {
             res.redirect("http://127.0.0.1:5500/Academia/front/erro.html")
