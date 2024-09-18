@@ -202,7 +202,7 @@ const create = (req, res) =>{
 
     //Conexão com o banco de dados
     let query = `INSERT INTO Livros (aluno) VALUE`
-    query += `('${nome}','${cpf}','${rg}',${email},'${telefone}','${plano}','${pagamento}','${endereco}','${bairro}','${cidade}','${datanascimento}');`;
+    query += `('${nome}','${cpf}','${rg}','${email}','${telefone}','${plano}','${pagamento}','${endereco}','${bairro}','${cidade}','${datanascimento}');`;
     con.query(query, (err, result) => {
         if (err) {
             res.redirect("http://127.0.0.1:5500/Academia/front/erro.html")
