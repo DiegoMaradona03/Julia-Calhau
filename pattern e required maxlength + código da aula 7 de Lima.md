@@ -25,6 +25,7 @@ title="O valor deve ter pelo menos 3 letras" fornece uma mensagem de erro amigá
 <input type="text" pattern="^\d+(\.\d{2})?$">
 ```
 **Explicação do Padrão ^\d+(\\.\d{2})?$:**
+
 **^:** Indica o início da string.
 
 **\d+:** Corresponde a um ou mais dígitos (0-9). Isso significa que a parte inteira do preço deve ter pelo menos um dígito.
