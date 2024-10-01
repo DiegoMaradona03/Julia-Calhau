@@ -20,6 +20,25 @@ pattern="[A-Za-z]{3,}" especifica que o valor deve ter pelo menos 3 letras (mai�
 title="O valor deve ter pelo menos 3 letras" fornece uma mensagem de erro amigável que será exibida se o valor não corresponder ao padrão.
 
 ### **Outros Exemplos de Uso**
+### Validação de Preço
+```
+<input type="text" pattern="^\d+(\.\d{2})?$">
+```
+**Explicação do Padrão ^\d+(\\.\d{2})?$:**
+**^:** Indica o início da string.
+
+**\d+:** Corresponde a um ou mais dígitos (0-9). Isso significa que a parte inteira do preço deve ter pelo menos um dígito.
+
+**(\\.\d{2})?:**
+
+**\\.:** Um ponto literal (precisamos escapar o ponto com \ porque, em expressões regulares, um ponto sozinho corresponde a qualquer caractere).
+
+**\d{2}:** Corresponde exatamente a dois dígitos (as casas decimais do preço).
+
+**()?:** O ponto e as casas decimais são opcionais (o ? indica que a parte anterior pode aparecer zero ou uma vez).
+
+**$:** Indica o final da string.
+
 ### Validação de Email
 ```
 <input type="email" pattern="[a-zA-Z0-9._%+-]+@(gmail\\.com|googlemail\.com)"
