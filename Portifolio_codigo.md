@@ -1,4 +1,4 @@
-#HTML
+# HTML
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +97,7 @@
 </html>
 ```
 
-#CSS
+# CSS
 ```
 /* Reset básico */
 * {
