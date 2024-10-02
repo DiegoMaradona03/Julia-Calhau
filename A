@@ -1,0 +1,37 @@
+1
+UPDATE cliente
+SET nome = 'Jacinto Mello'
+WHERE idCliente = 1
+
+UPDATE funcionario
+SET salario = salario * 1.10
+WHERE idFuncionario = 2
+
+UPDATE entrega
+SET status = 'Finalizada'
+WHERE idEntrega = 9
+
+UPDATE cliente
+SET email= 'osmarmanjo_updated@gmail.com'
+WHERE idCliente = 3
+
+UPDATE rota
+SET distancia = 9.0
+WHERE idRota = 2
+
+2
+
+DELETE FROM cliente
+WHERE idCliente = 4;
+
+DELETE FROM funcionario
+WHERE idFuncionario = 3;
+
+DELETE FROM rota
+WHERE idRota = 1;
+
+DELETE FROM entrega
+WHERE idEntrega = 5;
+
+DELETE FROM pedido
+WHERE idPedido = 10;
