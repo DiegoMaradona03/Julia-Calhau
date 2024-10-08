@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+        <div class="div8"></div>
+        <div class="div9"></div>
+        <div class="div10"></div>
+    </div>
+    <div class="container2">
+        <div class="div11"></div>
+        <div class="div12"></div>
+        <div class="div13"></div>
+        <div class="div14"></div>
+        <div class="div15"></div>
+        <div class="div16"></div>
+        <div class="div17"></div>
+        <div class="div18"></div>
+        <div class="div19"></div>
+        <div class="div20"></div>
+    </div>
+    <div class="container3">
+        <div class="triangulo-cima"></div>
+        <div class="triangulo-baixo"></div>
+        <div class="triangulo-esquerda"></div>
+        <div class="triangulo-direita"></div>
+    </div>    
+</body>
+</html>
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    overflow-y: hidden;
+}
+
+
+.container{
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+
+
+
+}
+
+& .div1{
+    width: 15vw;
+    height: 10vh;
+    background: red;
+}
+& .div2{
+    width: 15vw;
+    height: 10vh;
+    background: white;
+}
+& .div3{
+    width: 15vw;
+    height: 10vh;
+    background: blue;
+}
+& .div4{
+    width: 15vw;
+    height: 10vh;
+    background: orange;
+}
+& .div5{
+    width: 15vw;
+    height: 10vh;
+    background: yellow;
+}
+& .div6{
+    width: 15vw;
+    height: 10vh;
+    background: gray;
+}
+& .div7{
+    width: 15vw;
+    height: 10vh;
+    background: purple;
+}
+& .div8{
+    width: 15vw;
+    height: 10vh;
+    background: peru;
+}
+& .div9{
+    width: 15vw;
+    height: 10vh;
+    background: green;
+}
+& .div10{
+    width: 15vw;
+    height: 10vh;
+    background: powderblue;
+}
+
+.container2{
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+
+
+
+}
+
+& .div11{
+    width: 5vw;
+    height: 10vh;
+    background: red;
+    border-radius: 5vw;
+}
+& .div12{
+    width: 5vw;
+    height: 10vh;
+    background: white;
+    border-radius: 10vw;
+}
+& .div13{
+    width: 5vw;
+    height: 10vh;
+    background: blue;
+    border-radius: 10vw;
+}
+& .div14{
+    width: 5vw;
+    height: 10vh;
+    background: orange;
+    border-radius: 10vw;
+}
+& .div15{
+    width: 5vw;
+    height: 10vh;
+    background: yellow;
+    border-radius: 10vw;
+}
+& .div16{
+    width: 5vw;
+    height: 10vh;
+    background: gray;
+    border-radius: 10vw;
+}
+& .div17{
+    width: 5vw;
+    height: 10vh;
+    background: purple;
+    border-radius: 10vw;
+}
+& .div18{
+    width: 5vw;
+    height: 10vh;
+    background: peru;
+    border-radius: 10vw;
+}
+& .div19{
+    width: 5vw;
+    height: 10vh;
+    background: green;
+    border-radius: 10vw;
+}
+& .div20{
+    width: 5vw;
+    height: 10vh;
+    background: powderblue;
+    border-radius: 10vw;
+}
+
+.container3{
+    width: 100vw;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+
+
+
+}
+
+.triangulo-cima {
+    width: 0;
+    height: 0;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
+
+    border-bottom: 5vw solid red;
+}
+
+.triangulo-baixo {
+    width: 0;
+    height: 0;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
+    border-top: 5vw solid blue;
+}
+
+.triangulo-esquerda {
+    width: 0;
+    height: 0;
+    border-top: 5vh solid transparent;
+    border-bottom: 5vh solid transparent;
+    border-right: 5vw solid green;
+}
+
+.triangulo-direita {
+    width: 0;
+    height: 0;
+    border-top: 5vh solid transparent;
+    border-bottom: 5vh solid transparent;
+    border-left: 5vw solid yellow;
+}
