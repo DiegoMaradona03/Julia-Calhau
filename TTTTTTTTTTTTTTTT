@@ -1,0 +1,13 @@
+{
+    "nome": "Lucas Paiva",
+    "cpf": "12345678911",
+    "rg": "509741468",
+    "email": "lucas.paiva@example.com",
+    "telefone": "19946468",
+    "data_nascimento": "20-10-2000",
+    "plano": "Plano A",
+    "pagamento": "Pix",
+    "endereco": "João Beira",
+    "cidade": "Jaguariuna",
+    "Bairro": "Centro"
+}
