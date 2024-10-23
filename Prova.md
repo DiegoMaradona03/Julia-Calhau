@@ -141,7 +141,7 @@ const create = (req, res) => {
     let cliente_id = req.body.cliente_id;
 
     //Conexão com o banco de dados
-    let query = `INSERT INTO clientes (numero, andar, tipo, valor_diaria, statusQuarto, cliente_id) VALUES`
+    let query = `INSERT INTO quartos (numero, andar, tipo, valor_diaria, statusQuarto, cliente_id) VALUES`
     query += `('${numero}','${andar}','${tipo}','${valor_diaria}','${statusQuarto}','${cliente_id}');`;
     con.query(query, (err, result) => {
         if (err) {
