@@ -1,4 +1,9 @@
 # **Back**
+**// Dependencias a serem instaladas dentro de back:
+// npm init
+// npm i express cors mysql
+// npm install body-parser
+os recursos instalados atraves dos comandos devem estar dentro da pasta back apenas**
 ## src "pasta dentro de back"
 ## connect "pasta dentro do src, connect.js deve estar aqui dentro"
 ### connect.js
@@ -473,3 +478,5 @@ CREATE TABLE estacionamento (
     FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)
 );
 ```
+
+**use o comando node server.js apos isso dentro do prompt de comando,se não estiver na pasta de Back digite cd Back no prompt e depois coloque o código node server.js**
