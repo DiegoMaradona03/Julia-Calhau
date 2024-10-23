@@ -419,7 +419,7 @@ module.exports = router;
 
 # Banco "fora de Back"
 ### banco.sql "dentro de banco"
-**Não é necessario pegar está parte daqui pois você tambem pode pegar ela neste link do github** https://github.com/Lucaspaiva00/julia_calhau-2024/tree/main/2DES/03-pbe1/aula05
+**Não é necessario pegar está parte daqui pois você tambem pode pegar ela neste link do github** https://github.com/Lucaspaiva00/julia_calhau-2024/tree/main/2DES/03-pbe1/Aula09
 ```
 DROP DATABASE IF EXISTS hoteis;
 CREATE DATABASE IF NOT EXISTS hoteis;
