@@ -1,6 +1,7 @@
-
-
-# connect.js
+# **Back**
+## src "pasta dentro de back"
+## connect "pasta dentro do src, connect.js deve estar aqui dentro"
+### connect.js
 ```
 // Chamando as dependências
 const mysql = require('mysql')
@@ -14,8 +15,8 @@ const con = mysql.createConnection({
 
 module.exports = {con}
 ```
-
-# clientes.js
+## controllers "pasta dentro da pasta src, os arquivos clientes.js, telefone.js, quartos.js, reservas.js, estacionamento.js devem estar aqui dentro"
+### clientes.js
 ```
 const con = require('../connect/connect').con;
 
@@ -82,7 +83,7 @@ module.exports = {
 }
 ```
 
-# telefone.js
+### telefone.js
 ```
 const con = require('../connect/connect').con;
 
@@ -145,7 +146,7 @@ module.exports = {
 }
 ```
 
-# quartos.js
+### quartos.js
 ```
 const con = require('../connect/connect').con;
 
@@ -211,7 +212,7 @@ module.exports = {
 }
 ```
 
-# reservas.js
+### reservas.js
 ```
 const con = require('../connect/connect').con;
 
@@ -278,7 +279,7 @@ module.exports = {
 }
 ```
 
-# estacionamento.js
+### estacionamento.js
 ```
 const con = require('../connect/connect').con;
 
@@ -344,7 +345,7 @@ module.exports = {
 }
 ```
 
-# server.js 
+### server.js "dentro de back apenas e fora de todas as outras pastas"
 **(atenção!!! se você criou em um outro código de back-end com o mesmo numero que você estiver pondo neste código pode ser que não funcione caso o servidor do outro código ainda esteja rodando, se quiser por o mesmo numero sem dar este erro é necessario ir no código do outro server.js anterior e ir no prompt de comando apertando as teclas Ctrl + " apertar dentro do prompt de comando Ctrl + c para desligar o outro servidor)**
 ```
 const express = require('express')
@@ -359,4 +360,54 @@ app.use(routes)
 app.listen(3333, () => {
     console.log('Servidor rodando na porta 3333')
 })
+```
+
+### routes.js "dentro da pasta src apenas e não dentro de controllers ou connect"
+```
+// Dependências para funcionar
+const express = require('express');
+const router = express.Router();
+
+const clientes = require('./controllers/clientes');
+const telefone = require('./controllers/telefone');
+const quartos = require('./controllers/quartos');
+const reservas = require('./controllers/reservas');
+const estacionamento = require('./controllers/estacionamento');
+
+// Rota (Endpoint) de teste
+const teste = (req, res) => {
+    res.json("API respondendo com sucesso!");
+}
+
+// Rotas para clientes
+router.get('/', teste);
+router.post('/clientes', clientes.create);
+router.get('/clientes', clientes.read);
+router.put('/clientes', clientes.update);
+router.delete('/clientes/:id', clientes.deletar);
+
+// Rotas para telefone
+router.post('/telefone', telefone.create);
+router.get('/telefone', telefone.read);
+router.put('/telefone', telefone.update);
+router.delete('/telefone/:id', telefone.deletar);
+// Rotas para quartos
+router.post('/quartos', quartos.create);
+router.get('/quartos', quartos.read);
+router.put('/quartos', quartos.update);
+router.delete('/quartos/:id', quartos.deletar);
+
+// Rotas para reservas
+router.post('/reservas', reservas.create);
+router.get('/reservas', reservas.read);
+router.put('/reservas', reservas.update);
+router.delete('/reservas/:id', reservas.deletar);
+
+// Rotas para estacionamento
+router.post('/estacionamento', estacionamento.create);
+router.get('/estacionamento', estacionamento.read);
+router.put('/estacionamento', estacionamento.update);
+router.delete('/estacionamento/:id', estacionamento.deletar);
+
+module.exports = router;
 ```
