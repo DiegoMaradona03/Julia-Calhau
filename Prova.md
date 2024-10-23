@@ -1,4 +1,4 @@
-#clientes..js
+# clientes.js
 ```
 const con = require('../connect/connect').con;
 
@@ -65,7 +65,7 @@ module.exports = {
 }
 ```
 
-#telefone..js
+# telefone.js
 ```
 const con = require('../connect/connect').con;
 
