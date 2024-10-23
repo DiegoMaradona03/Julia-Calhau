@@ -54,7 +54,7 @@ const update = (req, res) => {
         } else {
             res.json({ message: 'Cliente atualizado com sucesso', result });
         }
-    });
+    })
 }
 
 module.exports = {
