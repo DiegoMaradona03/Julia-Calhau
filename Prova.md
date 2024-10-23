@@ -1,3 +1,5 @@
+
+
 # connect.js
 ```
 // Chamando as dependências
@@ -340,4 +342,21 @@ module.exports = {
     deletar,
     update
 }
+```
+
+# server.js 
+**(atenção!!! se você criou em um outro código de back-end com o mesmo numero que você estiver pondo neste código pode ser que não funcione caso o servidor do outro código ainda esteja rodando, se quiser por o mesmo numero sem dar este erro é necessario ir no código do outro server.js anterior e ir no prompt de comando apertando as teclas Ctrl + " apertar dentro do prompt de comando Ctrl + c para desligar o outro servidor)**
+```
+const express = require('express')
+const cors = require('cors')
+const routes = require('./src/routes')
+
+const app = express()
+app.use(express.json())
+app.use(cors())
+app.use(routes)
+
+app.listen(3333, () => {
+    console.log('Servidor rodando na porta 3333')
+})
 ```
