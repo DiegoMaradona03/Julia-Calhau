@@ -1,0 +1,89 @@
+1-Como visualizar todos os clientes?
+SELECT * FROM Clientes;
+
+2-Como visualizar um cliente específico pelo cliente_id?
+SELECT * FROM Clientes WHERE cliente_id = ?;  -- Substitua ? pelo ID do cliente
+
+3-Como visualizar todos os quartos disponíveis?
+SELECT * FROM Quartos WHERE status = 'Disponível';
+
+4-Como visualizar todos os serviços oferecidos?
+SELECT * FROM Servicos;
+
+5-Como visualizar todas as reservas feitas por um cliente específico?
+SELECT * FROM Reservas WHERE cliente_id = ?;  -- Substitua ? pelo ID do cliente
+
+6-Como visualizar todos os pagamentos realizados?
+SELECT * FROM Pagamentos;
+
+7-Como visualizar todos os funcionários?
+SELECT * FROM Funcionarios;
+
+8-Como visualizar um quarto específico pelo quarto_id?
+SELECT * FROM Quartos WHERE quarto_id = ?;  -- Substitua ? pelo ID do quarto
+
+9-Como visualizar a descrição de um serviço específico pelo servico_id?
+SELECT * FROM Servicos WHERE servico_id = ?;  -- Substitua ? pelo ID do serviço
+
+10-Como visualizar os detalhes de uma reserva específica pelo reserva_id?
+SELECT * FROM Reservas WHERE reserva_id = ?;  -- Substitua ? pelo ID da reserva
+
+11-Como atualizar o nome de um cliente?
+UPDATE Clientes SET nome = ? WHERE cliente_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+12-Como atualizar o status de um quarto para 'Ocupado'?
+UPDATE Quartos SET status = 'Ocupado' WHERE quarto_id = ?;  -- Substitua ? pelo ID do quarto
+
+13-Como atualizar o preço de um serviço?
+UPDATE Servicos SET preco = ? WHERE servico_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+14-Como atualizar o salário de um funcionário?
+UPDATE Funcionarios SET salario = ? WHERE funcionario_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+15-Como atualizar a data de checkout de uma reserva?
+UPDATE Reservas SET data_checkout = ? WHERE reserva_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+16-Como atualizar o email de um cliente?
+UPDATE Clientes SET email = ? WHERE cliente_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+17-Como atualizar o tipo de um quarto?
+UPDATE Quartos SET tipo = ? WHERE quarto_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+18-Como atualizar a descrição de um serviço?
+UPDATE Servicos SET descricao = ? WHERE servico_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+19-Como atualizar o telefone de um cliente?
+UPDATE Clientes SET telefone = ? WHERE cliente_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+20-Como atualizar o cargo de um funcionário?
+UPDATE Funcionarios SET cargo = ? WHERE funcionario_id = ?;  -- Substitua os ? pelos novos valores e ID
+
+21-Como remover um cliente pelo cliente_id?
+DELETE FROM Clientes WHERE cliente_id = ?;  -- Substitua ? pelo ID do cliente
+
+22-Como remover um quarto pelo quarto_id?
+DELETE FROM Quartos WHERE quarto_id = ?;  -- Substitua ? pelo ID do quarto
+
+23-Como cancelar uma reserva pelo reserva_id?
+DELETE FROM Reservas WHERE reserva_id = ?;  -- Substitua ? pelo ID da reserva
+
+24-Como remover um funcionário pelo funcionario_id?
+DELETE FROM Funcionarios WHERE funcionario_id = ?;  -- Substitua ? pelo ID do funcionário
+
+25-Como remover um serviço pelo servico_id?
+DELETE FROM Servicos WHERE servico_id = ?;  -- Substitua ? pelo ID do serviço
+
+26-Como remover um pagamento pelo pagamento_id?
+DELETE FROM Pagamentos WHERE pagamento_id = ?;  -- Substitua ? pelo ID do pagamento
+
+27-Como remover todos os clientes sem reservas?
+DELETE FROM Clientes WHERE cliente_id NOT IN (SELECT DISTINCT cliente_id FROM Reservas);
+
+28-Como remover todos os quartos que estão ocupados?
+DELETE FROM Quartos WHERE status = 'Ocupado';
+
+29-Como remover todos os serviços com preço menor que 50?
+DELETE FROM Servicos WHERE preco < 50;
+
+30-Como remover todos os pagamentos feitos em uma data específica?
+DELETE FROM Pagamentos WHERE data_pagamento = ?;  -- Substitua ? pela data desejada
