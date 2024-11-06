@@ -69,8 +69,7 @@ const deletar = (req, res) => {
 
 const update = (req, res) => {
     const { id, nome, cpf, email, endereco, data_nascimento, data_cadastro } = req.body;
-
-    const query = 'UPDATE clientes SET nome = ?, cpf = ?, email = ?, endereco = ?, data_nascimento = ?, data_cadastro = ? WHERE cliente_id = ?';
+    const query = `UPDATE clientes SET nome = '${nome}', cpf = '${cpf}', email = '${email}', endereco = '${endereco}', data_nascimento = '${data_nascimento}', data_cadastro = '${data_cadastro}' WHERE cliente_id = '${id}'`;
     con.query(query, [nome, cpf, email, endereco, data_nascimento, data_cadastro, id], (err, result) => {
         if (err) {
             res.status(500).json({ error: err.message });
@@ -132,8 +131,7 @@ const deletar = (req, res) => {
 
 const update = (req, res) => {
     const { id, cliente_id, numero, tipo } = req.body;
-
-    const query = 'UPDATE telefone SET cliente_id = ?, numero = ?, tipo = ? WHERE telefone_id = ?';
+    const query = `UPDATE telefone SET cliente_id = '${cliente_id}', numero = '${numero}', tipo = '${tipo}' WHERE telefone_id = '${id}'`;
     con.query(query, [cliente_id, numero, tipo, id], (err, result) => {
         if (err) {
             res.status(500).json({ error: err.message });
@@ -156,14 +154,15 @@ module.exports = {
 const con = require('../connect/connect').con;
 
 const create = (req, res) => {
+    let cliente_id = req.body.cliente_id;
     let marca_veiculo = req.body.marca_veiculo;
     let modelo_veiculo = req.body.modelo_veiculo;
     let ano_veiculo = req.body.email;
     let fabricacao_veiculo = req.body.fabricacao_veiculo;
 
     //Conexão com o banco de dados
-    let query = `INSERT INTO clientes (marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo) VALUES`
-    query += `('${marca_veiculo}','${modelo_veiculo}','${ano_veiculo}','${fabricacao_veiculo}');`;
+    let query = `INSERT INTO carros (cliente_id, marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo) VALUES`
+    query += `('${cliente_id}','${marca_veiculo}','${modelo_veiculo}','${ano_veiculo}','${fabricacao_veiculo}');`;
     con.query(query, (err, result) => {
         if (err) {
             res.status(500).json(err)
@@ -195,10 +194,10 @@ const deletar = (req, res) => {
 }
 
 const update = (req, res) => {
-    const { id, marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo } = req.body;
+    const { id, cliente_id, marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo } = req.body;
 
-    const query = 'UPDATE clientes SET marca_veiculo = ?, modelo_veiculo = ?, ano_veiculo = ?, fabricacao_veiculo = ?, WHERE carros_id = ?';
-    con.query(query, [marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo, id], (err, result) => {
+    const query = `UPDATE carros SET cliente_id = '${cliente_id}', marca_veiculo = '${marca_veiculo}', modelo_veiculo = '${modelo_veiculo}', ano_veiculo = '${ano_veiculo}', fabricacao_veiculo = '${fabricacao_veiculo}' WHERE carros_id = '${id}'`;
+    con.query(query, [cliente_id, marca_veiculo, modelo_veiculo, ano_veiculo, fabricacao_veiculo, id], (err, result) => {
         if (err) {
             res.status(500).json({ error: err.message });
         } else {
@@ -258,13 +257,13 @@ router.delete('/clientes/:id', clientes.deletar);
 router.post('/telefone', telefone.create);
 router.get('/telefone', telefone.read);
 router.put('/telefone', telefone.update);
-router.delete('/telefone/:telefone_id', telefone.deletar);
+router.delete('/telefone/:id', telefone.deletar);
 
 // Rotas para carros
 router.post('/carros', carros.create);
 router.get('/carros', carros.read);
 router.put('/carros', carros.update);
-router.delete('/carros/:telefone_id', carros.deletar);
+router.delete('/carros/:id', carros.deletar);
 
 module.exports = router;
 ```
