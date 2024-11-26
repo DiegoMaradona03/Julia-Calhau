@@ -1,0 +1,42 @@
+-- Criação do Banco de Dados
+CREATE DATABASE IF NOT EXISTS condominio_senai;
+USE condominio_senai;
+
+CREATE TABLE IF NOT EXISTS moradores (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    nascimento DATE NOT NULL,
+    idade INT(3) NOT NULL,
+    telefone INT(15) NOT NULL,
+    cpf VARCHAR(20) NOT NULL UNIQUE,
+    id_ap INT,
+    FOREIGN KEY (id_ap) REFERENCES apartamentos(id)
+);
+
+CREATE TABLE IF NOT EXISTS funcionarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    cpf VARCHAR(20) NOT NULL UNIQUE,
+    data_admissao DATE NOT NULL,
+    cargo VARCHAR(255) NOT NULL,
+    id_cond int,
+    FOREIGN KEY (id_cond) REFERENCES id_cond(id)
+);
+
+CREATE TABLE IF NOT EXISTS condominio (
+    id_cond INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL UNIQUE,
+    telefone INT(15) NOT NULL,
+    endereco VARCHAR(50) NOT NULL,
+    cnpj INT(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS apartamentos (
+    id_ap INT PRIMARY KEY AUTO_INCREMENT,
+    numero VARCHAR(10) NOT NULL,
+    bloco VARCHAR(10) NOT NULL,
+    andar int,
+    id_cond INT,
+    FOREIGN KEY (id_cond) REFERENCES condominio(id)
+);
