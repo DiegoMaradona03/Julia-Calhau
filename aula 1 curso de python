@@ -1,0 +1,82 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    /*
+    int numero;
+    
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
+    
+    printf("O numero digitado: %d", numero);
+    */
+    
+    /*
+    int n1, n2, soma;
+    
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &n1);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &n2);
+    
+    soma = n1 + n2;
+    
+    printf("O resultado da soma %d e %d é igual a: %d", n1, n2, soma);
+    
+    */
+    
+    
+    
+    /*
+    float raio, area;
+    const float PI = 3.14159;
+    
+    printf("Digite o raio: ");
+    scanf("%f", &raio);
+    
+    area = PI * raio * raio;
+    
+    printf("O área é igual a: %.2f", area);
+    */
+    
+    
+    /*
+    float lado1, lado2, area1, area2;
+    
+    printf("Digite o tamanho do primeiro lado: ");
+    scanf("%f", &lado1);
+    
+    printf("Digite o tamanho do segundo lado: ");
+    scanf("%f", &lado2);
+    
+    area1 = lado1 + lado2;
+    
+    area2 = area1 * 2;
+    
+    printf("A área do quadrado é igual a: %.2f, ", area1);
+    printf("O dobro da área do quadrado é: %.2f.", area2);
+    */
+    
+    
+    /*
+    float c, f;
+    
+    printf("Digite a temperatura em graus Celsius: ");
+    scanf("%f", &c);
+    
+    f= (c * 9.0 / 5.0) + 32.0;
+    
+    printf("%.2f graus Celsius é igual a %.2f graus Fahrenheit.", c, f);
+    
+    return 0;
+    */
+}
