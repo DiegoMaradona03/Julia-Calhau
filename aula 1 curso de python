@@ -87,3 +87,100 @@ int main()
     return 0;
     */
 }
+
+
+
+Aula 2:
+
+#include <stdio.h>
+
+int main() {
+    float gh, h, total;
+    
+    printf("Digite o seu salário ganho por hora: ");
+    scanf("%f", &gh);
+    
+    printf("Digite o numero de horas trabalhadas por mês: ");
+    scanf("%f", &h);
+    
+    total= gh * h;
+    
+    printf("\nA média do seu salário por mês é R$:%.2f", total);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    float altura, pesoIdeal;
+    char sexo;
+
+    printf("Digite sua altura (em metros): ");
+    scanf("%f", &altura);
+
+    printf("Digite o sexo (m para masculino, f para feminino): ");
+    scanf(" %c", &sexo);
+    if (sexo == 'm') {
+        pesoIdeal = (72.7 * altura) - 58;
+        printf("Peso ideal: %.2f kg\n", pesoIdeal);
+    } else if (sexo == 'f') {
+        pesoIdeal = (62.1 * altura) - 44.7;
+        printf("Peso ideal: %.2f kg\n", pesoIdeal);
+    } else {
+        printf("Sexo invalido!\n");
+    }
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    float peso, excesso = 0, multa = 0;
+
+    printf("Digite o peso dos peixes (em kg): ");
+    scanf("%f", &peso);
+
+    if (peso > 50) {
+        excesso = peso - 50;
+        multa = excesso * 4.0;
+    }
+
+    printf("Excesso: %.2f kg\n", excesso);
+    printf("Multa: R$ %.2f\n", multa);
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    float valorHora, horas, salarioBruto, ir, inss, sindicato, salarioLiquido;
+
+    printf("Quanto voce ganha por hora? ");
+    scanf("%f", &valorHora);
+
+    printf("Quantas horas trabalhou no mes? ");
+    scanf("%f", &horas);
+
+    salarioBruto = valorHora * horas;
+    ir = salarioBruto * 0.11;
+    inss = salarioBruto * 0.08;
+    sindicato = salarioBruto * 0.05;
+
+    salarioLiquido = salarioBruto - ir - inss - sindicato;
+
+    printf("+ Salario Bruto : R$ %.2f\n", salarioBruto);
+    printf("- IR (11%%)      : R$ %.2f\n", ir);
+    printf("- INSS (8%%)     : R$ %.2f\n", inss);
+    printf("- Sindicato (5%%): R$ %.2f\n", sindicato);
+    printf("= Salario Liquido: R$ %.2f\n", salarioLiquido);
+
+    return 0;
+}
