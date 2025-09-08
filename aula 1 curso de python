@@ -19,7 +19,6 @@ int main()
     printf("O numero digitado: %d", numero);
     */
     
-    /*
     int n1, n2, soma;
     
     printf("Digite o primeiro numero: ");
@@ -31,10 +30,21 @@ int main()
     soma = n1 + n2;
     
     printf("O resultado da soma %d e %d é igual a: %d", n1, n2, soma);
+    /*
     
     */
     
+    /*
+    int centimetro, metro;
     
+    printf("Digite a quantidade de metros: ");
+    scanf("%d", &n1);
+    
+    centimetro = metro * 100;
+    
+    printf("%d metros equivale a %d centimetros", metro, centimetro);
+    
+    */
     
     /*
     float raio, area;
@@ -45,35 +55,32 @@ int main()
     
     area = PI * raio * raio;
     
-    printf("O área é igual a: %.2f", area);
+    printf("A área é igual a: %.2f", area);
     */
     
     
     /*
-    float lado1, lado2, area1, area2;
+    float lado, area, dobro;
     
-    printf("Digite o tamanho do primeiro lado: ");
-    scanf("%f", &lado1);
+    printf("Digite o tamanho do lado do quadrado: ");
+    scanf("%f", &lado);
     
-    printf("Digite o tamanho do segundo lado: ");
-    scanf("%f", &lado2);
+    area = lado * lado;
     
-    area1 = lado1 + lado2;
+    dobro = area * 2;
     
-    area2 = area1 * 2;
-    
-    printf("A área do quadrado é igual a: %.2f, ", area1);
-    printf("O dobro da área do quadrado é: %.2f.", area2);
+    printf("\nA área do quadrado é igual a: %.2f \n", area);
+    printf("O dobro da área do quadrado é: %.2f", dobro);
     */
     
     
     /*
     float c, f;
     
-    printf("Digite a temperatura em graus Celsius: ");
+    printf("Indique a temperatura em graus Celsius: ");
     scanf("%f", &c);
     
-    f= (c * 9.0 / 5.0) + 32.0;
+    f= (c * 9 / 5) + 32;
     
     printf("%.2f graus Celsius é igual a %.2f graus Fahrenheit.", c, f);
     
