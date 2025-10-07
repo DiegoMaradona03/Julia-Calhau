@@ -73,18 +73,16 @@ drop numeração do commit 3 Mensagem do commit 3
 ---
 
 ## 6. Confirmar as alterações
-6.1. Para enviar as alterações ao GitHub, use **uma das opções abaixo**:
+6.1. Para enviar as alterações ao GitHub, no terminal use **uma das opções abaixo**:
 
 - **Forçar push padrão**:  
-```bash
+```
 git push --force
 ```
 > ⚠️ Sobrescreve o histórico remoto. Só faça isso se tiver certeza de que ninguém mais está trabalhando nessa branch.
 
 - **Forçar push seguro (recomendado)**:  
-```bash
+```
 git push --force-with-lease
 ```
 > ✅ Só sobrescreve se ninguém tiver enviado novos commits no remoto desde seu último pull. Evita apagar alterações de outras pessoas inadvertidamente.
-
-6.2. No VSCode, você também pode clicar em **Sync Changes** para enviar as alterações.
