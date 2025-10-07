@@ -73,7 +73,7 @@ drop numeração do commit 3 Mensagem do commit 3
 ---
 
 ## 6. Confirmar as alterações
-6.1. Para enviar as alterações ao GitHub, no terminal use **uma das opções abaixo**:
+6.1. Para enviar as alterações ao GitHub, no terminal use uma das opções abaixo:
 
 - **Forçar push padrão**:  
 ```
