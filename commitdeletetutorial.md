@@ -86,3 +86,75 @@ git push --force
 git push --force-with-lease
 ```
 > ✅ Só sobrescreve se ninguém tiver enviado novos commits no remoto desde seu último pull. Evita apagar alterações de outras pessoas inadvertidamente.
+
+---
+
+## ⚠️ Aviso de extrema importância
+Após executar o rebase interativo e entrar no modo de edição não tire em hipótese alguma todos os commits que aparecerem lista, isso irá apagar todos de uma só vez! ao invés disso use apenas drop! aqui um exemplo abaixo do que você deve ou não fazer:  
+- O que você pode fazer ✅
+```
+pick numeração do commit 1 Mensagem do commit 1
+pick numeração do commit 2 Mensagem do commit 2
+pick numeração do commit 3 Mensagem do commit 3
+
+# Comandos disponíveis:
+# p, pick = manter o commit
+# r, reword = manter, mas editar a mensagem
+# e, edit = parar para alterar o commit
+# s, squash = juntar com o commit anterior
+# f, fixup = juntar, mantendo só a mensagem anterior
+# x, exec = executar comando shell
+# b, break = parar o rebase
+# d, drop = deletar commit
+# ...
+```
+---
+```
+pick numeração do commit 1 Mensagem do commit 1
+pick numeração do commit 2 Mensagem do commit 2
+drop numeração do commit 3 Mensagem do commit 3
+
+# Comandos disponíveis:
+# p, pick = manter o commit
+# r, reword = manter, mas editar a mensagem
+# e, edit = parar para alterar o commit
+# s, squash = juntar com o commit anterior
+# f, fixup = juntar, mantendo só a mensagem anterior
+# x, exec = executar comando shell
+# b, break = parar o rebase
+# d, drop = deletar commit
+# ...
+```
+---
+- O que você não deve fazer ⚠️
+```
+pick numeração do commit 1 Mensagem do commit 1
+pick numeração do commit 2 Mensagem do commit 2
+pick numeração do commit 3 Mensagem do commit 3
+
+# Comandos disponíveis:
+# p, pick = manter o commit
+# r, reword = manter, mas editar a mensagem
+# e, edit = parar para alterar o commit
+# s, squash = juntar com o commit anterior
+# f, fixup = juntar, mantendo só a mensagem anterior
+# x, exec = executar comando shell
+# b, break = parar o rebase
+# d, drop = deletar commit
+# ...
+```
+---
+```
+drop numeração do commit 3 Mensagem do commit 3
+
+# Comandos disponíveis:
+# p, pick = manter o commit
+# r, reword = manter, mas editar a mensagem
+# e, edit = parar para alterar o commit
+# s, squash = juntar com o commit anterior
+# f, fixup = juntar, mantendo só a mensagem anterior
+# x, exec = executar comando shell
+# b, break = parar o rebase
+# d, drop = deletar commit
+# ...
+```
