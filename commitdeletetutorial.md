@@ -90,12 +90,28 @@ git push --force-with-lease
 ---
 
 ## ⚠️ Aviso de extrema importância
-Após executar o rebase interativo e entrar no modo de edição não tire em hipótese alguma todos os commits que aparecerem lista, isso irá apagar todos de uma só vez! ao invés disso use apenas drop! aqui um exemplo abaixo do que você deve ou não fazer:  
-- O que você pode fazer ✅
+Após executar o rebase interativo e entrar no modo de edição não tire em hipótese alguma todos os commits que aparecerem lista, isso irá apagar todos de uma só vez! ao invés disso use apenas drop! aqui um exemplo abaixo do que você deve ou não fazer:
+
+### Exemplo simplificado:
+Você é um programador que deseja deletar o **sétimo commit** em seu projeto.  
+Para isso, você utiliza o comando:
+
+```bash
+git rebase -i HEAD~9
+```
+
+Com isso, aparecerão todos os commits já realizados no projeto dentro do terminal, junto com a lista de comandos disponíveis:
+
 ```
 pick numeração do commit 1 Mensagem do commit 1
 pick numeração do commit 2 Mensagem do commit 2
 pick numeração do commit 3 Mensagem do commit 3
+pick numeração do commit 4 Mensagem do commit 4
+pick numeração do commit 5 Mensagem do commit 5
+pick numeração do commit 6 Mensagem do commit 6
+pick numeração do commit 7 Mensagem do commit 7
+pick numeração do commit 8 Mensagem do commit 8
+pick numeração do commit 9 Mensagem do commit 9
 
 # Comandos disponíveis:
 # p, pick = manter o commit
@@ -108,29 +124,23 @@ pick numeração do commit 3 Mensagem do commit 3
 # d, drop = deletar commit
 # ...
 ```
----
-```
-pick numeração do commit 1 Mensagem do commit 1
-pick numeração do commit 2 Mensagem do commit 2
-drop numeração do commit 3 Mensagem do commit 3
 
-# Comandos disponíveis:
-# p, pick = manter o commit
-# r, reword = manter, mas editar a mensagem
-# e, edit = parar para alterar o commit
-# s, squash = juntar com o commit anterior
-# f, fixup = juntar, mantendo só a mensagem anterior
-# x, exec = executar comando shell
-# b, break = parar o rebase
-# d, drop = deletar commit
-# ...
-```
+Após isso, você entrará no **modo de edição**, mas vamos supor que não saiba o modo correto para deletar o commit desejado:
+
 ---
-- O que você não deve fazer ⚠️
+
+### ✅ O que você pode fazer
+
 ```
 pick numeração do commit 1 Mensagem do commit 1
 pick numeração do commit 2 Mensagem do commit 2
 pick numeração do commit 3 Mensagem do commit 3
+pick numeração do commit 4 Mensagem do commit 4
+pick numeração do commit 5 Mensagem do commit 5
+pick numeração do commit 6 Mensagem do commit 6
+drop numeração do commit 7 Mensagem do commit 7
+pick numeração do commit 8 Mensagem do commit 8
+pick numeração do commit 9 Mensagem do commit 9
 
 # Comandos disponíveis:
 # p, pick = manter o commit
@@ -143,9 +153,13 @@ pick numeração do commit 3 Mensagem do commit 3
 # d, drop = deletar commit
 # ...
 ```
+
 ---
+
+### ⚠️ O que você não deve fazer
+
 ```
-drop numeração do commit 3 Mensagem do commit 3
+drop numeração do commit 7 Mensagem do commit 7
 
 # Comandos disponíveis:
 # p, pick = manter o commit
