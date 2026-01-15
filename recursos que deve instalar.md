@@ -1,13 +1,28 @@
-# Visual Studio Code
-Live Server (Padrão)
-Code Runner - Jun Han
-JSON - Beautify JSON
-Node Essentials - afractal
-Node Extension Pack - Swellaby
-npm Intellisense - Christian Kohler
-NPM-Sripts - jianglinghao
-NPM-Sripts - traBpUkciP
-GlassIt-VSC - hikarin522 (Opcional)
+# Visual Studio Code (APP)
+https://code.visualstudio.com/]
+
+# Android Studio (APP)
+https://developer.android.com/studio?hl=pt-br
+
+# XAMPP (APP)
+https://www.apachefriends.org/pt_br/index.html
+
+# Insominia (APP)
+https://insomnia.rest/download
+
+# Node js (APP)
+https://nodejs.org/en
+
+### Extenções para instalar no Visual Studio Code
+- Live Server (Padrão)
+- Code Runner - Jun Han
+- JSON - Beautify JSON
+- Node Essentials - afractal
+- Node Extension Pack - Swellaby
+- npm Intellisense - Christian Kohler
+- NPM-Sripts - jianglinghao
+- NPM-Sripts - traBpUkciP
+- GlassIt-VSC - hikarin522 (Opcional)
 
 Dependencias a serem instaladas:
 ```
@@ -22,6 +37,6 @@ npm install body-parser
  - fas a analise dos dados de entrada contidos
 // disponibilizando as propriedades em req.body
 
-# XAMPP
-# Insominia
-# Node js
+# XAMPP (APP)
+# Insominia (APP)
+# Node js (APP)
