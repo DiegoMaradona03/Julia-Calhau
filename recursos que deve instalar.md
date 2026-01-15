@@ -13,6 +13,9 @@ https://insomnia.rest/download
 # Node js (APP)
 https://nodejs.org/en
 
+# Git Bash (APP)
+https://git-scm.com/install/windows
+
 ### Extenções para instalar no Visual Studio Code
 - Live Server (Padrão)
 - Code Runner - Jun Han
