@@ -20,8 +20,8 @@ https://nodejs.org/en
 - Node Essentials - afractal
 - Node Extension Pack - Swellaby
 - npm Intellisense - Christian Kohler
-- NPM-Sripts - jianglinghao
-- NPM-Sripts - traBpUkciP
+- NPM-Scripts - jianglinghao
+- NPM-Scripts - traBpUkciP
 - GlassIt-VSC - hikarin522 (Opcional)
 
 Dependencias a serem instaladas:
