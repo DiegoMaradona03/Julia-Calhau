@@ -23,8 +23,7 @@ https://git-scm.com/install/windows
 - Node Essentials - afractal
 - Node Extension Pack - Swellaby
 - npm Intellisense - Christian Kohler
-- NPM-Scripts - jianglinghao
-- NPM-Scripts - traBpUkciP
+- NPM-Scripts (Tornou-se um recurso nativo e integrado do próprio Visual Studio Code, não sendo mais possivel baixar-lo)
 - GlassIt-VSC - hikarin522 (Opcional)
 
 Dependencias a serem instaladas:
@@ -40,6 +39,5 @@ npm install body-parser
  - fas a analise dos dados de entrada contidos
 // disponibilizando as propriedades em req.body
 
-# XAMPP (APP)
-# Insominia (APP)
-# Node js (APP)
+### Axios (extenção de fora)
+https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js
